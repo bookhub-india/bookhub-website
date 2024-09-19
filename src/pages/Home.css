@@ -31,6 +31,7 @@
     text-transform: uppercase;
     font-size: 14px;
     text-decoration: none;
+    border-radius: 12px;
 }
 
 .about-us {
@@ -46,5 +47,5 @@
     left: 710.67px; 
     top: 350.89px; 
     width: 133.33px; 
-    height: 62.22px; 
+    height: 62.22px;
 }
