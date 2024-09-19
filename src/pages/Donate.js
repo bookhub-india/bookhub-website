@@ -1,11 +1,11 @@
 import React from 'react';
-import Background from '../components/Background';
+
 
 const AboutUs = () => {
     return (
-        <Background>
+        <div>
             <h1>DONATE US</h1>
-        </Background>
+        </div>
     );
 };
 

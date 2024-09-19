@@ -25,6 +25,7 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   color: white;
+  font-family: 'Times New Roman', Times, serif;
   display: flex;
   align-items: center;
   justify-content: center;
