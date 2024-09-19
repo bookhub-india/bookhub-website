@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const AboutUs = () => {
+const Events = () => {
     return (
         <div>
             <h1>EVENTS</h1>
@@ -9,4 +9,4 @@ const AboutUs = () => {
     );
 };
 
-export default AboutUs;
+export default Events;
