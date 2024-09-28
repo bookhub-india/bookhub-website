@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import { FaInstagram, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -41,6 +42,7 @@ const Contact = () => {
         subject: '',
         message: ''
       });
+      setFormErrors({});
     } else {
       setFormErrors(errors);
     }
@@ -48,18 +50,21 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
-      <div className="contact-info">
-        <h1>Contact Us</h1>
-        <p>
-          E-mail: <a href="mailto:bookhubtindia@gmail.com">bookhubtindia@gmail.com</a>
-        </p>
-        <p>
-          Instagram: <a href="https://instagram.com/bookk_hubbb">@bookk_hubbb</a><br />
-          Facebook: <a href="https://facebook.com/BookHub">BookHub</a>
-        </p>
-      </div>
       <div className="contact-form-container">
-        <h3>Having Questions or Feedback? We’d love to hear from you.</h3>
+        <h1>Contact Us</h1>
+        <div className="social-icons">
+          <a href="mailto:bookhubtindia@gmail.com" target="_blank" rel="noopener noreferrer">
+            <FaEnvelope />
+          </a>
+          <a href="https://instagram.com/bookk_hubbb" target="_blank" rel="noopener noreferrer">
+            <FaInstagram />
+          </a>
+          <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+        </div>
+        <h3>Having Questions or Feedback?</h3>
+        <h4> We’d love to hear from you!</h4>
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
             <label htmlFor="name">Name</label>
@@ -108,7 +113,7 @@ const Contact = () => {
             />
             {formErrors.message && <p className="error">{formErrors.message}</p>}
           </div>
-          <button type="submit" className="submit-button">Submit</button>
+          <button type="submit" className="submit-button">Send Message</button>
           {submitSuccess && <p className="success">Your message has been sent successfully!</p>}
         </form>
       </div>
