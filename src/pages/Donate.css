@@ -1,0 +1,62 @@
+.donate-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #4A2E18;
+}
+
+p {
+    text-align: center;
+}
+
+.donation-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.submit-button,
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #4A2E18;
+}
+
+.submit-button {
+    background-color: #4A2E18;
+    color: white;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #3B2412;
+}
+
+.payment-methods,
+.recurring-donations {
+    margin-top: 20px;
+}
+
+.payment-methods ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.payment-methods li,
+.recurring-donations h3 {
+    margin-bottom: 10px;
+}
