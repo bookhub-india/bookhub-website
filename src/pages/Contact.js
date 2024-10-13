@@ -81,7 +81,7 @@ const Contact = () => {
           <a href="https://instagram.com/bookk_hubbb" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>
-          <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/company/bookhubt/mycompany/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
         </div>
@@ -134,9 +134,13 @@ const Contact = () => {
               required
             />
             {formErrors.message && <p className="error">{formErrors.message}</p>}
-          </div>
+            </div>
           <button type="submit" className="submit-button">Send Message</button>
-          {submitSuccess && <p className="success">Your message has been sent successfully!</p>}
+
+          {submitSuccess && (
+            <p style={{ color: 'green' }}>Thanks! Your response has been submitted.</p>
+          )}
+          
           {submitError && <p className="error">{submitError}</p>}
         </form>
       </div>
