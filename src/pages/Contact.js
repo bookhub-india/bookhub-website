@@ -12,6 +12,7 @@ const Contact = () => {
 
   const [formErrors, setFormErrors] = useState({});
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e) => {
     setFormData({
@@ -30,19 +31,40 @@ const Contact = () => {
     return errors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const errors = validateForm();
     if (Object.keys(errors).length === 0) {
-      console.log('Form submitted:', formData);
-      setSubmitSuccess(true);
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      setFormErrors({});
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            access_key: 'ea6d9746-ff80-486c-a89d-09e8d1290dc5', 
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message
+          })
+        });
+        if (response.ok) {
+          setSubmitSuccess(true);
+          setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+          });
+          setFormErrors({});
+        } else {
+          throw new Error('Failed to send message');
+        }
+      } catch (error) {
+        setSubmitError('Error sending message. Please try again later.');
+        console.error(error);
+      }
     } else {
       setFormErrors(errors);
     }
@@ -115,6 +137,7 @@ const Contact = () => {
           </div>
           <button type="submit" className="submit-button">Send Message</button>
           {submitSuccess && <p className="success">Your message has been sent successfully!</p>}
+          {submitError && <p className="error">{submitError}</p>}
         </form>
       </div>
     </div>
