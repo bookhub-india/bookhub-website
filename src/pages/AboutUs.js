@@ -39,6 +39,7 @@ const AboutUs = () => {
         color: '#4A2E18',
         fontWeight: 'bold',
         marginBottom: '15px',
+        position: 'center',
     };
 
     const subHeaderStyle = {
@@ -51,7 +52,7 @@ const AboutUs = () => {
     return (
         <div style={containerStyle}>
             <div style={textSectionStyle}>
-                <h1 style={mainHeaderStyle}>Welcome to BookHub</h1>
+                <h1 style={mainHeaderStyle}>About Us</h1>
                 <p style={subHeaderStyle}>
                     At BookHub, we are passionate about nurturing young writers. Join our supportive community where you can refine your skills, gain valuable feedback, and find your unique voice. Whether it’s through editing tips or workshops with established authors, we provide all the resources you need to thrive. Ready to turn your passion into purpose? Connect with us today!
                 </p>
