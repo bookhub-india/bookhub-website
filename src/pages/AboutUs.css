@@ -4,8 +4,8 @@
 }
 
 .text-section {
-    flex: 0 0 60%; /* Occupies 60% of the width */
-    padding-right: 20px; /* Space between text and slider */
+    flex: 0 0 60%;
+    padding-right: 20px; 
 }
 
 .slider-section {

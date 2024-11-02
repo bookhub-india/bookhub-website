@@ -18,7 +18,6 @@ const Donate = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Donation submitted:', donationData);
-        // Here you can add logic to handle the donation submission
     };
 
     return (
