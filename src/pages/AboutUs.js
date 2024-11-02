@@ -30,7 +30,7 @@ const AboutUs = () => {
 
     const sliderSectionStyle = {
         flex: '0 0 40%',
-        position: 'relative', // Allow absolute positioning of the slider
+        position: 'relative', 
     };
 
     const mainHeaderStyle = {

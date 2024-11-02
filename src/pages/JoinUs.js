@@ -247,7 +247,7 @@ const JoinUs = () => {
              )}
            </div>
 
-           {/* Relevant Work Experience */}
+           
            <div className='form-group'>
              <label htmlFor='workExperience'>Relevant Work Experience (Optional)</label>
              <textarea 
