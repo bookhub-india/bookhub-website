@@ -1,0 +1,33 @@
+.about-us-container {
+    display: flex;
+    padding: 40px;
+}
+
+.text-section {
+    flex: 0 0 60%; /* Occupies 60% of the width */
+    padding-right: 20px; /* Space between text and slider */
+}
+
+.slider-section {
+    flex: 0 0 40%; /* Occupies 40% of the width */
+}
+
+.main-header {
+    font-size: 32px; /* Adjusted size for better visibility */
+    font-family: 'Times New Roman', Times, serif;
+    color: #4A2E18; /* Updated color */
+    font-weight: bold;
+    margin-bottom: 15px; /* Adjusted margin for spacing */
+}
+
+.sub-header {
+    font-size: 18px; /* Adjusted size for better readability */
+    font-family: 'Times New Roman', Times, serif;
+    color: #4A2E18; /* Updated color */
+    line-height: 1.6; 
+}
+
+.slider-image {
+    width: 100%;
+    height: auto; 
+}
