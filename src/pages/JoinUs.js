@@ -105,8 +105,8 @@ const JoinUs = () => {
   };
 
   return (
-    <div className="joinus-container">
-      <div className="joinus-form-container">
+    <div className="joinus-container" style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px' }}>
+      <div className="joinus-form-container" style={{ width: '80%', maxWidth: '600px' }}>
         <h1>Join Us</h1>
         <h3>We’d love to have you on our team!</h3>
         <form onSubmit={handleSubmit} className="joinus-form">
@@ -119,6 +119,7 @@ const JoinUs = () => {
               value={formData.fullName}
               onChange={handleChange}
               required
+              style={{ width: '100%' }} 
             />
             {formErrors.fullName && <p className="error">{formErrors.fullName}</p>}
           </div>
@@ -132,6 +133,7 @@ const JoinUs = () => {
               value={formData.email}
               onChange={handleChange}
               required
+              style={{ width: '100%' }} 
             />
             {formErrors.email && <p className="error">{formErrors.email}</p>}
           </div>
@@ -139,13 +141,8 @@ const JoinUs = () => {
           <div className="form-group">
             <label htmlFor="phone">Phone Number</label>
             <div style={{ display: 'flex' }}>
-              <select
-                name="countryCode"
-                value={formData.countryCode}
-                onChange={handleChange}
-                style={{ marginRight: '10px' }}
-              >
-              
+              <select name="countryCode" value={formData.countryCode} onChange={handleChange} style={{ marginRight: '10px' }}>
+                
                 <option value="+1">USA (+1)</option>
                 <option value="+44">UK (+44)</option>
                 <option value="+91">India (+91)</option>
@@ -159,6 +156,7 @@ const JoinUs = () => {
                 onChange={handleChange}
                 required
                 placeholder="Your phone number"
+                style={{ width: '100%' }} 
               />
             </div>
             {formErrors.phone && <p className="error">{formErrors.phone}</p>}
@@ -173,18 +171,13 @@ const JoinUs = () => {
               value={formData.linkedIn}
               onChange={handleChange}
               placeholder="https://linkedin.com/in/yourprofile"
+              style={{ width: '100%' }} 
             />
           </div>
 
           <div className="form-group">
             <label htmlFor="position">Which position are you applying for?</label>
-            <select
-              id="position"
-              name="position"
-              value={formData.position}
-              onChange={handleChange}
-              required
-            >
+            <select id="position" name="position" value={formData.position} onChange={handleChange} required style={{ width: '100%' }}>
               
               <option value="">Select a position</option>
               <option value="A">Position A</option>
@@ -204,23 +197,24 @@ const JoinUs = () => {
               onChange={handleChange}
               maxLength={300} 
               required
+              style={{ width: '100%', height:'80px' }} 
             />
-            {formErrors.interestReason && (
-              <p className="error">{formErrors.interestReason}</p>
-            )}
-             
-             <p>{`${(formData.interestReason.match(/\S+/g) || []).length} / 120 words`}</p>
-          </div>
+             {<p>{`${(formData.interestReason.match(/\S+/g) || []).length} / 120 words`}</p>}
+             {formErrors.interestReason && (
+               <p className="error">{formErrors.interestReason}</p>
+             )}
+           </div>
 
-          
-          <div className="form-group">
+           
+           <div className='form-group'>
              <label htmlFor='educationLevel'>Highest Level of Education</label>
              <select 
                id='educationLevel' 
                name='educationLevel' 
                value={formData.educationLevel} 
                onChange={handleChange} 
-               required
+               required 
+               style={{ width:'100%' }}
              >
                
                <option value="">Select your education level</option>
@@ -238,6 +232,7 @@ const JoinUs = () => {
                    type='text' 
                    placeholder='Please specify' 
                    onChange={(e) => setFormData({...formData, educationLevelOther:e.target.value})} 
+                   style={{ width:'100%' }}
                  />
                </>
              )}
@@ -256,6 +251,7 @@ const JoinUs = () => {
                value={formData.workExperience} 
                onChange={handleChange} 
                placeholder='List your previous roles, responsibilities, and duration' 
+               style={{ width:'100%', height:'80px' }}
              />
            </div>
 
@@ -267,7 +263,8 @@ const JoinUs = () => {
                name='remoteExperience' 
                value={formData.remoteExperience} 
                onChange={handleChange} 
-               required
+               required 
+               style={{ width:'100%' }}
              >
                
                <option value=''>Select an option</option>
@@ -284,6 +281,7 @@ const JoinUs = () => {
                    value={formData.remoteDescription} 
                    onChange={handleChange} 
                    placeholder='Describe your experience (at least 100 words)' 
+                   style={{ width:'100%', height:'80px' }}
                  />
                  
                </>
@@ -300,6 +298,7 @@ const JoinUs = () => {
                onChange={handleChange} 
                maxLength={300} 
                required 
+               style={{ width:'100%', height:'80px' }}
              />
              
              {( formErrors.workAtBookHubReason ) && (
@@ -308,7 +307,6 @@ const JoinUs = () => {
                  </>
              )}
 
-             
            </div>
 
            
@@ -319,8 +317,6 @@ const JoinUs = () => {
            {submitError && (<p className='error'>{submitError}</p>)}
 
          </form>
-
-        
 
        </div>  
      </div>  
