@@ -5,6 +5,9 @@
     margin: auto; /* Center the slideshow */
     overflow: hidden;
 }
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
 .slide {
     width: 100%; /* Allow the width to fill the container */
@@ -16,10 +19,9 @@
 
 .controls {
     position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    bottom: -30px; /* Position arrows just below the event section */
+    left: 50%; 
+    transform: translateX(-50%); /* Center arrows horizontally below the box */
 }
 
 .arrow {
@@ -37,4 +39,29 @@
 
 .event-section h2 {
     text-align: center; /* Center align the event titles */
+}
+.event-section {
+    margin: 20px auto; /* Center the event section with auto margins */
+    padding: 20px; /* Add padding inside the event section */
+    border-radius: 15px; /* Rounded corners for the entire section */
+    background-color: #f9f9f9; /* Light background for contrast */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 800px; /* Set a max width to prevent overflow */
+    position: relative; /* Allow absolute positioning of arrows */
+}
+
+.event-description {
+    text-align: center; 
+    margin: 20px auto; 
+    line-height: 1.5; 
+    max-width: 600px; 
+    padding: 15px; 
+    border-radius: 10px;
+    background-color: #4A2E18; 
+    color: white; 
+}
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 0.8); 
+    transform: scale(1.1); 
+    transition: background-color 0.3s, transform 0.3s; 
 }
