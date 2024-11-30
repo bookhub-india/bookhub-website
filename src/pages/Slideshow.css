@@ -1,0 +1,40 @@
+.slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Set a max width for the slideshow */
+    margin: auto; /* Center the slideshow */
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%; /* Allow the width to fill the container */
+    height: 400px; /* Set a fixed height for the slideshow */
+    background-size: contain; /* Ensure the image is contained within the box */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-position: center; /* Center the image */
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 20px; /* Adjust size of arrows */
+    color: black; /* Arrow color */
+    background-color: white; /* White background for visibility */
+    border-radius: 50%; /* Make it circular */
+    padding: 5px; /* Smaller padding for smaller button size */
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light gray on hover */
+}
+
+.event-section h2 {
+    text-align: center; /* Center align the event titles */
+}
