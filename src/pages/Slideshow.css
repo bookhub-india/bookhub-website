@@ -1,53 +1,53 @@
 .slideshow {
     position: relative;
     width: 100%;
-    max-width: 800px; /* Set a max width for the slideshow */
-    margin: auto; /* Center the slideshow */
+    max-width: 800px;
+    margin: auto; 
     overflow: hidden;
 }
 body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; 
 }
 
 .slide {
-    width: 100%; /* Allow the width to fill the container */
-    height: 400px; /* Set a fixed height for the slideshow */
-    background-size: contain; /* Ensure the image is contained within the box */
-    background-repeat: no-repeat; /* Prevent image repetition */
-    background-position: center; /* Center the image */
+    width: 100%; 
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .controls {
     position: absolute;
-    bottom: -30px; /* Position arrows just below the event section */
+    bottom: -30px;
     left: 50%; 
-    transform: translateX(-50%); /* Center arrows horizontally below the box */
+    transform: translateX(-50%); 
 }
 
 .arrow {
     cursor: pointer;
-    font-size: 20px; /* Adjust size of arrows */
-    color: black; /* Arrow color */
-    background-color: white; /* White background for visibility */
-    border-radius: 50%; /* Make it circular */
-    padding: 5px; /* Smaller padding for smaller button size */
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    border-radius: 50%; 
+    padding: 5px;
 }
 
 .arrow:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Light gray on hover */
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .event-section h2 {
-    text-align: center; /* Center align the event titles */
+    text-align: center;
 }
 .event-section {
-    margin: 20px auto; /* Center the event section with auto margins */
-    padding: 20px; /* Add padding inside the event section */
-    border-radius: 15px; /* Rounded corners for the entire section */
-    background-color: #f9f9f9; /* Light background for contrast */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 800px; /* Set a max width to prevent overflow */
-    position: relative; /* Allow absolute positioning of arrows */
+    margin: 20px auto;
+    padding: 20px; 
+    border-radius: 15px;
+    background-color: #f9f9f9; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; 
+    position: relative;
 }
 
 .event-description {

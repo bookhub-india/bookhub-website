@@ -9,21 +9,21 @@
 }
 
 .slider-section {
-    flex: 0 0 40%; /* Occupies 40% of the width */
+    flex: 0 0 40%;
 }
 
 .main-header {
-    font-size: 32px; /* Adjusted size for better visibility */
+    font-size: 32px;
     font-family: 'Times New Roman', Times, serif;
-    color: #4A2E18; /* Updated color */
+    color: #4A2E18;
     font-weight: bold;
-    margin-bottom: 15px; /* Adjusted margin for spacing */
+    margin-bottom: 15px;
 }
 
 .sub-header {
-    font-size: 18px; /* Adjusted size for better readability */
+    font-size: 18px; 
     font-family: 'Times New Roman', Times, serif;
-    color: #4A2E18; /* Updated color */
+    color: #4A2E18; 
     line-height: 1.6; 
 }
 
