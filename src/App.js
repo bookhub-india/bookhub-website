@@ -8,7 +8,7 @@ import AboutUs from './pages/AboutUs';
 import JoinUs from './pages/JoinUs';
 import Events from './pages/Events';
 import Contact from './pages/Contact';
-import Projects from './pages/Projects';
+import Submission from './pages/Submission';
 import Donate from './pages/Donate';
 
 const pageVariants = {
@@ -47,7 +47,7 @@ const App = () => {
                         <Route path="/join-us" element={<JoinUs />} />
                         <Route path="/events" element={<Events />} />
                         <Route path="/contact" element={<Contact />} />
-                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/Submission" element={<Submission />} />
                         <Route path="/donate" element={<Donate />} />
                     </Routes>
                 </motion.div>
