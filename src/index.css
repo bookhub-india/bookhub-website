@@ -22,7 +22,7 @@ body {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Button styles with absolute positioning */
+/* Button styles */
 .button {
   height: 50px; /* Fixed height for all buttons */
   min-width: 95px; /* Minimum width for buttons */
@@ -36,31 +36,10 @@ body {
   justify-content: center;
 }
 
-/* Set button positions as specified for desktop only */
-.home { left: calc(1%); top: calc(28%); } 
-.about_us { left: calc(15%); top: calc(28%); }
-.join_us { left: calc(30%); top: calc(28%); }
-.events { left: calc(45%); top: calc(28%); }
-.contact { left: calc(60%); top: calc(28%); }
-.projects { left: calc(75%); top: calc(28%); }
-.donate { left: calc(90%); top: calc(28%); }
-
-/* Responsive Styles */
+/* Flexbox container for nav links */
 .nav-links {
-  display: flex; /* Show links in desktop view */
-}
-
-.hamburger {
-  display: none; /* Hide hamburger by default */
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.bar {
-  height: 3px;
-  width: 25px;
-  background-color: #4A2E18;
-  margin: 3px 0; /* Space between bars */
+    display: flex; /* Show links in desktop view */
+    margin-left: auto; /* Pushes links towards the left */
 }
 
 /* Media Queries */
@@ -75,7 +54,7 @@ body {
       flex-direction : column ; /* Stack links vertically on mobile */ 
       align-items : stretch ; /* Stretch items to full width */ 
       position : absolute ; /* Position absolute for dropdown effect */ 
-      top : calc(109px); /* Position below navbar height */ 
+      top: calc(109px); /* Position below navbar height */ 
       left : 0;
       background-color : #FCF6E8; /* Background color for dropdown */ 
       z-index : 1; /* Ensure dropdown is above other content */ 
@@ -88,6 +67,7 @@ body {
 
  .hamburger {
      display:flex ; /* Show hamburger icon on mobile */ 
+     cursor: pointer; /* Change cursor to pointer */
  }
 
  .button {
@@ -106,13 +86,23 @@ body {
  }
 }
 
-h1 {
- text-align :center ; 
- margin-top :20px ; 
+/* Additional styles for hamburger icon */
+.hamburger {
+    display: none; /* Hide hamburger by default */
+    flex-direction: column;
+    cursor: pointer;
 }
 
-body, html {
- height :100%; 
- margin :0;
- padding :0;
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger icon on mobile */
+        margin-left: auto; /* Align hamburger icon to the right */
+    }
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #4A2E18;
+    margin: 3px 0; /* Space between bars */
 }
