@@ -34,6 +34,7 @@
     border-radius: 12px;
 }
 
+/* Positioning for buttons */
 .about-us {
     position: absolute;
     left: 525.89px; 
@@ -48,4 +49,54 @@
     top: 350.89px; 
     width: 133.33px; 
     height: 62.22px;
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+    .main-header {
+        font-size: 36px; /* Adjust header size */
+        position: relative; /* Change to relative for better positioning */
+        left: auto; /* Reset left positioning */
+        top: auto; /* Reset top positioning */
+        width: auto; /* Allow width to adjust */
+        height: auto; /* Allow height to adjust */
+        text-align: center; /* Center align text */
+        margin-top: 20px; /* Add margin for spacing */
+    }
+
+    .sub-header {
+        font-size: 18px; /* Adjust sub-header size */
+        position: relative; /* Change to relative for better positioning */
+        left: auto; /* Reset left positioning */
+        top: auto; /* Reset top positioning */
+        width: auto; /* Allow width to adjust */
+        height: auto; /* Allow height to adjust */
+        margin-top: 10px; /* Add margin for spacing */
+        text-align: center; /* Center align text */
+    }
+
+    .button {
+        width: calc(100% - 40px); /* Make buttons responsive with padding */
+        margin-left: 20px; /* Add margin for spacing on the left */
+        margin-right: 20px; /* Add margin for spacing on the right */
+        margin-top: 10px; /* Add margin between buttons */
+        height:auto ; /* Allow height to adjust based on content */
+        font-size :16px ; /* Increase button font size for better readability */ 
+        padding :10px ; /* Add padding for a better touch target */ 
+        text-align : center ; /* Center align button text */ 
+     }
+
+     .about-us,
+     .contact-us {
+         position: relative; /* Change to relative for stacking buttons vertically */
+         left : auto ; /* Reset left positioning */
+         top : auto ; /* Reset top positioning */
+         display : block ; /* Make buttons block level elements */ 
+         width : calc(100% - 40px); /* Full width with margins accounted for */  
+         margin : 0 auto ; /* Center buttons horizontally */  
+     }
+
+     .about-us {
+         margin-bottom: 20px; /* Add space below the About Us button for better separation from Contact Us button */
+     }
 }
