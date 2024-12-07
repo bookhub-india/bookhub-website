@@ -31,3 +31,39 @@
     width: 100%;
     height: auto; 
 }
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+    .about-us-container {
+        flex-direction: column; /* Stack sections vertically */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .text-section {
+        flex: 0 0 auto; /* Allow text section to take full width */
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 20px; /* Add space below text section */
+    }
+
+    .slider-section {
+        flex: 0 0 auto; /* Allow slider section to take full width */
+        position: relative; 
+        width: 100%; /* Make slider full width */
+    }
+
+    .main-header {
+        font-size: 24px; /* Adjust header size for small screens */
+        text-align: center; /* Center align text */
+    }
+
+    .sub-header {
+        font-size: 16px; /* Adjust sub-header size for small screens */
+        text-align: center; /* Center align text */
+        margin-top: 10px; /* Add margin for spacing */
+    }
+
+    .slider-image {
+        width: 100%; /* Make images responsive */
+        height: auto; 
+    }
+}

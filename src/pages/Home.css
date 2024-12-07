@@ -1,24 +1,21 @@
+.home-container {
+    padding: 20px; /* General padding for home container */
+}
+
 .main-header {
-    font-size: 57.22px;
+    font-size: 32px; /* Adjusted for better visibility */
     font-family: 'Times New Roman', Times, serif;
-    font-weight: bold; 
-    position: absolute;
-    left: 312.22px; 
-    top: 150.00px; 
-    width: 755.56px; 
-    height: 245.33px; 
-    text-align: center; 
+    color: #4A2E18;
+    font-weight: bold;
+    text-align: center; /* Center align for all screens */
 }
 
 .sub-header {
-    font-size: 26.67px;
+    font-size: 18px; 
     font-family: 'Times New Roman', Times, serif;
-    position: absolute;
-    left: 312.22px; 
-    top: 250.00px; 
-    width: 755.56px; 
-    height: 46.22px; 
-    text-align: center; 
+    color: #4A2E18; 
+    line-height: 1.6; 
+    text-align: center; /* Center align for all screens */
 }
 
 .button {
@@ -32,71 +29,63 @@
     font-size: 14px;
     text-decoration: none;
     border-radius: 12px;
+    margin-bottom: 10px; /* Space below each button */
 }
 
-/* Positioning for buttons */
-.about-us {
-    position: absolute;
-    left: 525.89px; 
-    top: 350.89px; 
-    width: 133.33px; 
-    height: 62.22px; 
+.about-us-container {
+    display: flex;
+    flex-direction: column; /* Stack vertically on small screens */
 }
 
-.contact-us {
-    position: absolute;
-    left: 710.67px; 
-    top: 350.89px; 
-    width: 133.33px; 
-    height: 62.22px;
+.text-section {
+    padding-right: 20px; 
 }
 
-/* Media Queries for Small Screens */
-@media (max-width: 768px) {
-    .main-header {
-        font-size: 36px; /* Adjust header size */
-        position: relative; /* Change to relative for better positioning */
-        left: auto; /* Reset left positioning */
-        top: auto; /* Reset top positioning */
-        width: auto; /* Allow width to adjust */
-        height: auto; /* Allow height to adjust */
-        text-align: center; /* Center align text */
-        margin-top: 20px; /* Add margin for spacing */
+.slider-section {
+    width: 100%; /* Full width for slider */
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+    .about-us-container {
+        flex-direction: row; /* Row layout on larger screens */
+        padding-top: 40px; /* Additional padding for larger screens */
+        align-items: center; /* Align items in the center vertically */
+        justify-content: center; /* Center contents horizontally */
     }
 
-    .sub-header {
-        font-size: 18px; /* Adjust sub-header size */
-        position: relative; /* Change to relative for better positioning */
-        left: auto; /* Reset left positioning */
-        top: auto; /* Reset top positioning */
-        width: auto; /* Allow width to adjust */
-        height: auto; /* Allow height to adjust */
-        margin-top: 10px; /* Add margin for spacing */
-        text-align: center; /* Center align text */
+    .text-section {
+        flex-basis: 60%; /* Take up 60% on larger screens */
+        padding-right: 20px; 
+        margin-bottom: 0; /* Remove bottom margin on larger screens */
+        text-align: left; /* Left align text section */
     }
 
-    .button {
-        width: calc(100% - 40px); /* Make buttons responsive with padding */
-        margin-left: 20px; /* Add margin for spacing on the left */
-        margin-right: 20px; /* Add margin for spacing on the right */
-        margin-top: 10px; /* Add margin between buttons */
-        height:auto ; /* Allow height to adjust based on content */
-        font-size :16px ; /* Increase button font size for better readability */ 
-        padding :10px ; /* Add padding for a better touch target */ 
-        text-align : center ; /* Center align button text */ 
-     }
+    .slider-section {
+        flex-basis: 40%; /* Take up 40% on larger screens */
+        position: relative; 
+        display: flex; /* Use flex to center images */
+        justify-content: center; /* Center images in the slider section */
+        align-items: center; /* Center images vertically if needed */
+        margin-left: auto; /* Align slider to right */
+        margin-right: auto; /* Center the slider horizontally */
+        max-width: 400px; /* Set a max width for the slider section */
+        overflow: hidden; /* Hide overflow if necessary */
+    }
 
-     .about-us,
-     .contact-us {
-         position: relative; /* Change to relative for stacking buttons vertically */
-         left : auto ; /* Reset left positioning */
-         top : auto ; /* Reset top positioning */
-         display : block ; /* Make buttons block level elements */ 
-         width : calc(100% - 40px); /* Full width with margins accounted for */  
-         margin : 0 auto ; /* Center buttons horizontally */  
-     }
+    .slider-section img {
+        max-width: 100%; /* Set max width for images to ensure they fit within the container */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 12px; /* Optional: Add border radius for a softer look */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for depth effect */
+        display: block; /* Ensure image is treated as a block element for centering */
+        margin-left: auto; /* Center image horizontally within its container */
+        margin-right: auto; /* Center image horizontally within its container */
+    }
+}
 
-     .about-us {
-         margin-bottom: 20px; /* Add space below the About Us button for better separation from Contact Us button */
-     }
+.button-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    margin-top: 20px; /* Space above buttons */
 }
