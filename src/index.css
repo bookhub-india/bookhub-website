@@ -42,6 +42,18 @@ body {
     margin-left: auto; /* Pushes links towards the left */
 }
 
+/* Add margin for desktop buttons */
+@media (min-width: 769px) { /* Only apply this for larger screens */
+    .button {
+        margin-right: 15px; /* Adjust this value as needed for spacing */
+    }
+
+    /* Remove margin from the last button to avoid extra space at the end */
+    .button:last-child {
+        margin-right: 0;
+    }
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
  .navbar {
