@@ -15,11 +15,19 @@ body {
   position: relative; 
   margin: 0 auto; 
   border-bottom: 3px solid #4A2E18; 
+  transition: background-color 0.3s ease;
+   box-shadow: 
+       -2px -2px 5px rgba(255,255,255,0.8), 
+       inset -2px -2px 5px rgba(255,255,255,0.4);
 }
 
 .logo-image {
   width: 105px; /* Logo size */
   height: auto; /* Maintain aspect ratio */
+  transition: background-color 0.3s ease;
+   box-shadow: 
+       -2px -2px 5px rgba(255,255,255,0.8), 
+       inset -2px -2px 5px rgba(255,255,255,0.4);
 }
 
 /* Button styles */
@@ -34,12 +42,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 
+     -2px -2px 5px rgba(255,255,255,0.8), 
+     inset -2px -2px 5px rgba(255,255,255,0.4);
 }
 
 /* Flexbox container for nav links */
 .nav-links {
     display: flex; /* Show links in desktop view */
     margin-left: auto; /* Pushes links towards the left */
+    transition: background-color 0.3s ease;
+   box-shadow: 
+       -2px -2px 5px rgba(255,255,255,0.8), 
+       inset -2px -2px 5px rgba(255,255,255,0.4);
 }
 
 /* Add margin for desktop buttons */
