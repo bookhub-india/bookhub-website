@@ -23,9 +23,13 @@ const Home = () => {
             {/* Welcome Section */}
             <h1 className="main-header">WELCOME TO BOOKHUB</h1>
             <p className="sub-header">
-                A Non-Profit Organization To Support YOUNG WRITERS. At BookHub, we are passionate about nurturing young writers. Join our supportive community where you can refine your skills, gain valuable feedback, and find your unique voice. Whether it’s through editing tips or workshops with established authors, we provide all the resources you need to thrive. Ready to turn your passion into purpose? Connect with us today!
+                A Non-Profit Organization To Support YOUNG WRITERS.
             </p>
-
+            {/* Buttons Section */}
+            <div className="button-container">
+                <Link to="/about-us" className="button about-us">ABOUT US</Link>
+                <Link to="/contact" className="button contact-us">CONTACT</Link>
+            </div>
             {/* About Us Section (Merged Content) */}
             <div className="about-us-container">
                 <div className="slider-section">
@@ -44,12 +48,6 @@ const Home = () => {
                         </div>
                     </Slider>
                 </div>
-            </div>
-
-            {/* Buttons Section */}
-            <div className="button-container">
-                <Link to="/about-us" className="button about-us">ABOUT US</Link>
-                <Link to="/contact" className="button contact-us">CONTACT</Link>
             </div>
         </div>
     );
