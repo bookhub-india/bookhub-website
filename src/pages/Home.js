@@ -39,7 +39,7 @@ const Home = () => {
             {/* Welcome Section */}
             <h1 className="main-header">WELCOME TO BOOKHUB</h1>
             <p className="sub-header">
-                A Non-Profit Organization To Support YOUNG WRITERS.
+                A Non-Profit by authors for the authors.
             </p>
 
             {/* Buttons Section */}
