@@ -1,91 +1,55 @@
 .home-container {
     padding: 20px; /* General padding for home container */
+    position: relative; /* Position relative for absolute children */
+    overflow: hidden; /* Hide overflow */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center; /* Center content horizontally */
+    color: white; /* Text color for better visibility against background */
+    text-align: center; /* Center align text */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the images */
 }
 
+/* Increased font sizes for headers and buttons on homepage */
 .main-header {
-    font-size: 32px; /* Adjusted for better visibility */
+    font-size: 48px; /* Increased header size */
     font-family: 'Times New Roman', Times, serif;
-    color: #4A2E18;
-    font-weight: bold;
-    text-align: center; /* Center align for all screens */
+    margin-top: 20px; /* Add margin to move it down slightly */
 }
 
 .sub-header {
-    font-size: 33px; 
+    font-size: 24px; /* Increased sub-header size */
     font-family: 'Times New Roman', Times, serif;
-    color: #4A2E18; 
     line-height: 1.6; 
-    text-align: center; /* Center align for all screens */
+    margin-top: 10px; /* Add margin to move it down slightly */
 }
 
-.button {
+/* Specific styles for homepage buttons only */
+.home-button {
     display: flex;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     justify-content: center;
-    background-color: #4A2E18; 
+    background-color: rgba(74, 46, 24, 0.8); /* Semi-transparent background for buttons */
     color: white;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 18px; /* Increased button font size for homepage buttons */
     text-decoration: none;
     border-radius: 12px;
+    padding: 10px 20px; /* Added padding for larger button area */
     margin-bottom: 10px; /* Space below each button */
-}
-
-.about-us-container {
-    display: flex;
-    flex-direction: column; /* Stack vertically on small screens */
-}
-
-.text-section {
-    padding-right: 20px; 
-}
-
-.slider-section {
-    width: 100%; /* Full width for slider */
-}
-
-/* Media Queries for Responsive Design */
-@media (min-width: 768px) {
-    .about-us-container {
-        flex-direction: row; /* Row layout on larger screens */
-        padding-top: 40px; /* Additional padding for larger screens */
-        align-items: center; /* Align items in the center vertically */
-        justify-content: center; /* Center contents horizontally */
-    }
-
-    .text-section {
-        flex-basis: 60%; /* Take up 60% on larger screens */
-        padding-right: 20px; 
-        margin-bottom: 0; /* Remove bottom margin on larger screens */
-        text-align: left; /* Left align text section */
-    }
-
-    .slider-section {
-        flex-basis: 40%; /* Take up 40% on larger screens */
-        position: relative; 
-        display: flex; /* Use flex to center images */
-        justify-content: center; /* Center images in the slider section */
-        align-items: center; /* Center images vertically if needed */
-        margin-left: auto; /* Align slider to right */
-        margin-right: auto; /* Center the slider horizontally */
-        max-width: 400px; /* Set a max width for the slider section */
-        overflow: hidden; /* Hide overflow if necessary */
-    }
-
-    .slider-section img {
-        max-width: 100%; /* Set max width for images to ensure they fit within the container */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 12px; /* Optional: Add border radius for a softer look */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for depth effect */
-        display: block; /* Ensure image is treated as a block element for centering */
-        margin-left: auto; /* Center image horizontally within its container */
-        margin-right: auto; /* Center image horizontally within its container */
-    }
 }
 
 .button-container {
     display: flex;
     justify-content: center; /* Center buttons horizontally */
     margin-top: 20px; /* Space above buttons */
+}
+
+/* Navbar button styles (ensure these are defined separately) */
+.navbar .button {
+    font-size: 14px; /* Normal size for navbar buttons */
 }
