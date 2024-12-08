@@ -73,3 +73,21 @@
 .navbar .button {
    font-size: 14px; /* Normal size for navbar buttons */
 }
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    box-shadow: 
+       -2px -2px 5px rgba(255,255,255,0.8), 
+       inset -2px -2px 5px rgba(255,255,255,0.4);
+}
+.social-icons a {
+    color: #4A2E18;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icons a:hover {
+    color: #3B2412;
+    transform: scale(1.2); 
+}
