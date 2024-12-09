@@ -2,13 +2,19 @@
     display: flex;
     flex-direction: column; /* Stack sections vertically */
     padding: 40px; /* General padding for desktop */
+    background-color: #FCF6E8; /* Light gray background for contrast */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-
-/* Text section styles */
+/* Increased font sizes for headers and buttons on homepage */
 .text-section {
     flex: 0 0 auto; /* Allow text section to take full width */
     padding-right: 0; /* Remove right padding */
     margin-bottom: 20px; /* Add space below text section */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly white background for text section */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the text section */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 /* Header styles */
