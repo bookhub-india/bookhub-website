@@ -1,0 +1,102 @@
+.events-container {
+    padding: 40px;
+    background-color: #FCF6E8; /* Light beige background */
+}
+
+.main-heading {
+    font-size: 48px; /* Size of the main heading */
+    color: #4A2E18; /* Dark color for text */
+    text-align: center; /* Center align main heading */
+    margin-bottom: 40px; /* Space below main heading */
+}
+
+.special-event {
+    margin-bottom: 40px;
+    background-color: #F7CD5D; /* Sunrise color */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+   /* Center align special event section */
+   width: calc(50% - 20px); /* Reduce width by half with some margin */
+   margin-left:auto; 
+   margin-right:auto; 
+}
+
+.event-title {
+    font-size: 36px;
+    color: #4A2E18; /* Dark color for text */
+}
+
+.event-slider {
+    margin-bottom: 20px;
+}
+
+.slider-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.event-description {
+    font-size: 18px;
+    color: #4A2E18; /* Dark color for text */
+}
+
+/* General styles for events section */
+.events-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #4A2E18; /* Dark color for section titles */
+    margin-bottom: 20px;
+    text-align: center; /* Center align section titles */
+}
+
+.event-card {
+   background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+   border-radius: 8px; /* Rounded corners */
+   padding: 15px;
+   margin-bottom: 15px; /* Space between cards */
+
+   /* Reduce width to align towards center */
+   width: calc(50% - 10px); /* Reduce width by half with some margin */
+   margin-left:auto; 
+   margin-right:auto; 
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.event-card-title {
+    font-size: 22px; /* Title size for event cards */
+}
+
+.event-card-description {
+    font-size: 16px; /* Description size for event cards */
+}
+
+/* More Info Button Styles */
+.more-info-button {
+   display:inline-block;
+   margin-top:10px;
+   padding:10px 15px;
+   background-color:#4A2E18; /* Dark background for button */
+   color:white;
+   text-decoration:none;
+   border-radius:5px;
+   transition:.3s ease;
+   align-items: center;
+}
+
+.more-info-button:hover {
+   background-color:#6F4E37; /* Lighter shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+   .special-event,
+   .event-card {
+       width: calc(100% - 10px); /* Full width on smaller screens */
+   }
+}
