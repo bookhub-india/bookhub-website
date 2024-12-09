@@ -1,59 +1,73 @@
 .about-us-container {
     display: flex;
-    padding: 40px;
+    flex-direction: column; /* Stack sections vertically */
+    padding: 40px; /* General padding for desktop */
 }
 
+/* Text section styles */
 .text-section {
-    flex: 0 0 60%;
-    padding-right: 20px; 
+    flex: 0 0 auto; /* Allow text section to take full width */
+    padding-right: 0; /* Remove right padding */
+    margin-bottom: 20px; /* Add space below text section */
 }
 
-.slider-section {
-    flex: 0 0 40%;
-}
-
+/* Header styles */
 .main-header {
-    font-size: 32px;
+    font-size: 48px; /* Normal header size for desktop */
     font-family: 'Times New Roman', Times, serif;
     color: #4A2E18;
-    font-weight: bold;
-    margin-bottom: 15px;
+    margin-top: 20px; /* Add margin to move it down slightly */
+    
+    /* Text shadow for glowing effect */
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8), 
+        0 0 20px rgba(255, 255, 255, 0.6), 
+        0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+/* Background highlight behind the header */
+.text-section::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Adjust as needed */
+    left: -10px; /* Adjust as needed */
+    right: -10px; /* Adjust as needed */
+    bottom: -10px; /* Adjust as needed */
+    background-color: rgba(255, 255, 255, 0.2); /* Light background color with transparency */
+    border-radius: 8px; /* Optional rounded corners */
+    z-index: -1; /* Place behind the header text */
 }
 
 .sub-header {
-    font-size: 18px; 
+    font-size: 18px; /* Normal sub-header size for desktop */
     font-family: 'Times New Roman', Times, serif;
     color: #4A2E18; 
     line-height: 1.6; 
 }
 
+/* Slider section styles */
+.slider-section {
+    flex: 0 0 auto; /* Allow slider section to take full width */
+}
+
+/* Slider image styles */
 .slider-image {
-    width: 100%;
+    width: 100%; /* Make images responsive */
     height: auto; 
 }
 
 /* Media Queries for Small Screens */
 @media (max-width: 768px) {
-    .about-us-container {
-        flex-direction: column; /* Stack sections vertically */
-        padding: 20px; /* Reduce padding for smaller screens */
-    }
-
     .text-section {
-        flex: 0 0 auto; /* Allow text section to take full width */
-        padding-right: 0; /* Remove right padding */
-        margin-bottom: 20px; /* Add space below text section */
-    }
-
-    .slider-section {
-        flex: 0 0 auto; /* Allow slider section to take full width */
-        position: relative; 
-        width: 100%; /* Make slider full width */
+        text-align: center; /* Center align text on small screens */
     }
 
     .main-header {
-        font-size: 24px; /* Adjust header size for small screens */
+        font-size: 28px; /* Adjust header size for small screens */
         text-align: center; /* Center align text */
+        margin-bottom: 10px; /* Adjust margin for smaller screens */
+        box-shadow: none; /* Remove shadow on mobile if desired */
+        background-color: transparent; /* Remove background color on mobile if desired */
     }
 
     .sub-header {
@@ -65,5 +79,18 @@
     .slider-image {
         width: 100%; /* Make images responsive */
         height: auto; 
+    }
+}
+
+/* Media Queries for Desktop Screens to Resize Slider Images */
+@media (min-width: 769px) {
+    .slider-section {
+        width: 100%; /* Ensure slider section takes full width on desktop */
+    }
+
+    .slider-image {
+        max-width: calc(100% / 5); /* Resize images to one-fifth of their original size on desktop */
+        margin-left: auto; /* Center align images in slider section */
+        margin-right: auto;
     }
 }

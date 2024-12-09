@@ -1,11 +1,11 @@
-import React from 'react';
-import logo from '../assets/BOOKHUB-LOGO.png';
-import image1 from '../assets/image1.jpg'; 
-import image2 from '../assets/image2.jpg'; 
-import image3 from '../assets/image3.jpg'; 
+import React, { useEffect, useState } from 'react';
+import image1 from '../assets/BOOKHUB-LOGO.png';
+import image2 from '../assets/BOOKHUB-LOGO-2.png'; 
+import image3 from '../assets/BOOKHUB-LOGO-3.png'; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import './AboutUs.css'; // Ensure you import the CSS file
 
 const AboutUs = () => {
     const settings = {
@@ -18,58 +18,25 @@ const AboutUs = () => {
         autoplaySpeed: 3000,
     };
 
-    const containerStyle = {
-        display: 'flex',
-        padding: '40px',
-    };
-
-    const textSectionStyle = {
-        flex: '0 0 60%',
-        paddingRight: '20px',
-    };
-
-    const sliderSectionStyle = {
-        flex: '0 0 40%',
-        position: 'relative', 
-    };
-
-    const mainHeaderStyle = {
-        fontSize: '57.22px',
-        fontFamily: 'Times New Roman, Times, serif',
-        color: '#4A2E18',
-        fontWeight: 'bold',
-        marginBottom: '15px',
-        position: 'center',
-    };
-
-    const subHeaderStyle = {
-        fontSize: '26px',
-        fontFamily: 'Times New Roman, Times, serif',
-        color: '#4A2E18',
-        lineHeight: '1.6',
-    };
-
     return (
-        <div style={containerStyle}>
-            <div style={textSectionStyle}>
-                <h1 style={mainHeaderStyle}>About Us</h1>
-                <p style={subHeaderStyle}>
+        <div className="about-us-container">
+            <div className="text-section">
+                <h1 className="main-header">About Us</h1>
+                <p className="sub-header">
                     At BookHub, we are passionate about nurturing young writers. Join our supportive community where you can refine your skills, gain valuable feedback, and find your unique voice. Whether it’s through editing tips or workshops with established authors, we provide all the resources you need to thrive. Ready to turn your passion into purpose? Connect with us today!
                 </p>
             </div>
-            <div style={sliderSectionStyle}>
-                <Slider {...settings} style={{ width: '475px', height: '480.22px', position: 'absolute', left: '0', top: '0' }}>
+            {/* Moved slider section below text section */}
+            <div className="slider-section">
+                <Slider {...settings}>
                     <div>
-                        <img src={logo} alt="Home" style={{ width: '475px', height: '480.22px' }} />
+                        <img src={image1} alt="Home" className="slider-image" />
                     </div>
                     <div>
-                        <img src={image1} alt="Slide 1" style={{ width: '475px', height: '480.22px' }} />
+                        <img src={image2} alt="Slide 2" className="slider-image" />
                     </div>
                     <div>
-                        <img src={image2} alt="Slide 2" style={{ width: '475px', height: '480.22px' }} />
-                    </div>
-                    <div>
-                        <img src={image3} alt="Slide 3" style={{ width: '475px', height: '480.22px' }} />
+                        <img src={image3} alt="Slide 3" className="slider-image" />
                     </div>
                 </Slider>
             </div>
