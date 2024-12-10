@@ -1,64 +1,142 @@
-import React, { useState } from 'react';
-import './Research.css';
+import React from 'react';
+import './Research.css'; // Import the CSS file for styling
+import image1 from '../assets/BOOKHUB-LOGO.png';
+import image2 from '../assets/BOOKHUB-LOGO-2.png';
+import image3 from '../assets/BOOKHUB-LOGO-3.png';
 
-const Donate = () => {
-    const [donationData, setDonationData] = useState({
-        name: '',
-        email: '',
-        amount: ''
-    });
+const teamMembers = [
+    {
+        name: 'Author 1',
+        role: 'Project 1',
+        description: 'Sample Description',
+        image: image1, // Replace with actual image path
+    },
+    {
+        name: 'Author 2',
+        role: 'Project 2',
+        description: 'Sample Description',
+        image: image1, // Replace with actual image path
+    },
+    {
+        name: 'Author 3',
+        role: 'Project 3',
+        description: 'Sample Description',
+        image: image1, 
+    },
+    {
+        name: 'Article 1',
+        role: 'Publication Date',
+        description: 'Sample Description',
+        image: image2, // Replace with actual image path
+    },
+    {
+        name: 'Article 2',
+        role: 'Publication Date',
+        description: 'Sample Description',
+        image: image2, // Replace with actual image path
+    },
+    {
+        name: 'Article 3',
+        role: 'Publication Date',
+        description: 'Sample Description',
+        image: image2, // Replace with actual image path
+    },
+    {
+        name: 'Article 4',
+        role: 'Publication Date',
+        description: 'Sample Description',
+        image: image2, // Replace with actual image path
+    },
+    {
+        name: 'Article 5',
+        role: 'Publication Date',
+        description: 'Sample Description',
+        image: image2, // Replace with actual image path
+    },
+    {
+        name: 'Article 6',
+        role: 'Publication Date',
+        description: 'Sample Description',
+        image: image2, // Replace with actual image path
+    },
+    // Extras Team Members
+    {
+        name: 'Extras 1',
+        role: 'NA',
+        description: 'Sample Description',
+        image: image3, // Replace with actual image path
+    },
+    {
+        name: 'Extras 2',
+        role: 'NA',
+        description: 'Sample Description',
+        image: image3, // Replace with actual image path
+    },
+    {
+        name: 'Extras 3',
+        role: 'NA',
+        description: 'Sample Description',
+        image: image3, // Replace with actual image path
+    },
+    {
+        name: 'Extras 4',
+        role: 'NA',
+        description: 'Sample Description',
+        image: image3, // Replace with actual image path
+    }
+];
 
-    const handleChange = (e) => {
-        setDonationData({
-            ...donationData,
-            [e.target.name]: e.target.value
-        });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Donation submitted:', donationData);
-    };
-
+const Research = () => {
     return (
-        <div className='donate-container'>
-            <h1>Donate Us</h1>
-            <p>Your contributions help us make a difference. Choose an amount to donate or customize your own!</p>
-            <form onSubmit={handleSubmit} className='donation-form'>
-                <div className='form-group'>
-                    <label htmlFor='name'>Name</label>
-                    <input type='text' id='name' name='name' value={donationData.name} onChange={handleChange} required />
+        <div className="team-container">
+            <h1 className="team-header">Resources</h1>
+            
+            <section className="founders-section">
+                <h2 className="section-title">Authors</h2>
+                <div className="team-members">
+                    {teamMembers.slice(0, 3).map(member => (
+                        <div className="team-member" key={member.name}>
+                            <img src={member.image} alt={member.name} className="member-image" />
+                            <h3>{member.name}</h3>
+                            <p className="member-role">{member.role}</p>
+                            <p>{member.description}</p>
+                        </div>
+                    ))}
                 </div>
-                <div className='form-group'>
-                    <label htmlFor='email'>Email</label>
-                    <input type='email' id='email' name='email' value={donationData.email} onChange={handleChange} required />
+            </section>
+
+            <section className="media-team-section">
+                <h2 className="section-title">Articles</h2>
+                <div className="team-members">
+                    {teamMembers.slice(3, 9).map(member => (
+                        <div className="team-member" key={member.name}>
+                            <img src={member.image} alt={member.name} className="member-image" />
+                            <h3>{member.name}</h3>
+                            <p className="member-role">{member.role}</p>
+                            <p>{member.description}</p>
+                        </div>
+                    ))}
                 </div>
-                <div className='form-group'>
-                    <label htmlFor='amount'>Donation Amount</label>
-                    <input type='number' id='amount' name='amount' value={donationData.amount} onChange={handleChange} required />
+            </section>
+
+            <section className="events-team-section">
+                <h2 className="section-title">Extras</h2>
+                <div className="team-members">
+                    {teamMembers.slice(9).map(member => (
+                        <div className="team-member" key={member.name}>
+                            <img src={member.image} alt={member.name} className="member-image" />
+                            <h3>{member.name}</h3>
+                            <p className="member-role">{member.role}</p>
+                            <p>{member.description}</p>
+                        </div>
+                    ))}
                 </div>
-                <button type='submit' className='submit-button'>Donate</button>
-            </form>
-            <div className='payment-methods'>
-                <h3>Payment Methods</h3>
-                <p>We accept the following payment methods:</p>
-                <ul>
-                    <li><a href='#'>Credit/Debit Card</a></li>
-                    <li><a href='#'>PayPal</a></li>
-                    <li><a href='#'>Bank Transfer</a></li>
-                </ul>
-            </div>
-            <div className='recurring-donations'>
-                <h3>Recurring Donations</h3>
-                <p>If you would like to set up recurring donations, please select the frequency:</p>
-                <select>
-                    <option value='monthly'>Monthly</option> {/* Closing tag added here */}
-                    <option value='quarterly'>Quarterly</option>
-                    <option value='yearly'>Yearly</option>
-                </select>
-            </div>
+            </section>
+
+            {/* Add more sections as needed */}
+            
         </div>
     );
 };
 
-export default Donate;
+export default Research;
