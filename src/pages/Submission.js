@@ -4,7 +4,7 @@ import './ArticleSubmission.css';
 const ArticleSubmission = () => {
     return (
         <div className="submission-container">
-            <h1>Article Submission</h1>
+            <h1>Submission</h1>
             <iframe
                 id="JotFormIFrame-243393455323053"
                 title="Form"
