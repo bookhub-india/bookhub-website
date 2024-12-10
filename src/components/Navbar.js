@@ -5,18 +5,18 @@ import logo2 from '../assets/BOOKHUB-LOGO-2.png'; // Second logo image
 import logo3 from '../assets/BOOKHUB-LOGO-3.png'; // Third logo image
 import '../index.css';
 
-const logos = [logo1, logo2, logo3]; // Array of logos
+const logos = [logo1, logo2, logo3];
 
 const Navbar = () => {
     const [currentLogoIndex, setCurrentLogoIndex] = useState(0);
-    const [isMenuOpen, setIsMenuOpen] = useState(false); // State for menu visibility
+    const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentLogoIndex((prevIndex) => (prevIndex + 1) % logos.length);
-        }, 3000); // Change logo every 3 seconds
+        }, 3000);
 
-        return () => clearInterval(interval); // Clear interval on component unmount
+        return () => clearInterval(interval); 
     }, []);
 
     return (

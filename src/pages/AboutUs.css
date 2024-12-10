@@ -1,9 +1,9 @@
 html, body {
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; 
 }
 .about-us-container {
     display: flex;
-    flex-direction: column; /* Stack sections vertically */
+    flex-direction: column; 
     padding: 40px; /* General padding for desktop */
     background-color: #FCF6E8; /* Light gray background for contrast */
     border-radius: 8px; /* Rounded corners for the container */
