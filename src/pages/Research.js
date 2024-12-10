@@ -1,5 +1,5 @@
 import React from 'react';
-import './Research.css'; // Import the CSS file for styling
+import './Research.css';
 import image1 from '../assets/BOOKHUB-LOGO.png';
 import image2 from '../assets/BOOKHUB-LOGO-2.png';
 import image3 from '../assets/BOOKHUB-LOGO-3.png';
@@ -9,13 +9,13 @@ const teamMembers = [
         name: 'Author 1',
         role: 'Project 1',
         description: 'Sample Description',
-        image: image1, // Replace with actual image path
+        image: image1,
     },
     {
         name: 'Author 2',
         role: 'Project 2',
         description: 'Sample Description',
-        image: image1, // Replace with actual image path
+        image: image1,
     },
     {
         name: 'Author 3',
@@ -27,62 +27,62 @@ const teamMembers = [
         name: 'Article 1',
         role: 'Publication Date',
         description: 'Sample Description',
-        image: image2, // Replace with actual image path
+        image: image2,
     },
     {
         name: 'Article 2',
         role: 'Publication Date',
         description: 'Sample Description',
-        image: image2, // Replace with actual image path
+        image: image2,
     },
     {
         name: 'Article 3',
         role: 'Publication Date',
         description: 'Sample Description',
-        image: image2, // Replace with actual image path
+        image: image2,
     },
     {
         name: 'Article 4',
         role: 'Publication Date',
         description: 'Sample Description',
-        image: image2, // Replace with actual image path
+        image: image2,
     },
     {
         name: 'Article 5',
         role: 'Publication Date',
         description: 'Sample Description',
-        image: image2, // Replace with actual image path
+        image: image2,
     },
     {
         name: 'Article 6',
         role: 'Publication Date',
         description: 'Sample Description',
-        image: image2, // Replace with actual image path
+        image: image2,
     },
-    // Extras Team Members
+    
     {
         name: 'Extras 1',
         role: 'NA',
         description: 'Sample Description',
-        image: image3, // Replace with actual image path
+        image: image3,
     },
     {
         name: 'Extras 2',
         role: 'NA',
         description: 'Sample Description',
-        image: image3, // Replace with actual image path
+        image: image3,
     },
     {
         name: 'Extras 3',
         role: 'NA',
         description: 'Sample Description',
-        image: image3, // Replace with actual image path
+        image: image3,
     },
     {
         name: 'Extras 4',
         role: 'NA',
         description: 'Sample Description',
-        image: image3, // Replace with actual image path
+        image: image3, 
     }
 ];
 
@@ -131,10 +131,7 @@ const Research = () => {
                         </div>
                     ))}
                 </div>
-            </section>
-
-            {/* Add more sections as needed */}
-            
+            </section>           
         </div>
     );
 };

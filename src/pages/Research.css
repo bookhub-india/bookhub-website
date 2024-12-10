@@ -3,64 +3,64 @@
 }
 
 .team-header {
-    text-align: center; /* Center align main heading */
+    text-align: center;
     font-size: 36px;
     margin-bottom: 30px;
 }
 
 .section-title {
-    text-align: center; /* Center align section titles */
-    font-size: 28px; /* Size of section titles */
-    margin-bottom: 20px; /* Space below section titles */
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px; 
 }
 
 .team-members {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-wrap: wrap;
 }
 
 .team-member {
-    background-color: #f9f9f9; /* Light background for contrast */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* Subtle shadow */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1); 
     margin: 15px;
     padding: 15px;
     text-align: center;
     
-   /* Reduce width to align towards center */
-   width: calc(30% - 30px); /* Adjust width as needed for desktop */
-   transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover effect */
+   
+   width: calc(30% - 30px); 
+   transition: transform 0.3s, box-shadow 0.3s; 
 }
 
 .team-member:hover {
-   transform: translateY(-5px); /* Lift effect on hover */
-   box-shadow: 0px 8px 20px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+   transform: translateY(-5px);
+   box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
 }
 
 .member-image {
-   width: 100%; /* Responsive images */
-   height:auto; /* Maintain aspect ratio */
-   border-radius: 10px; /* Rounded corners for images */
+   width: 100%; 
+   height:auto; 
+   border-radius: 10px;
 }
 
 .member-role {
-   font-weight:bold; /* Highlight the role */
-   color:#B48ED8; /* Color for roles */
+   font-weight:bold; 
+   color:#B48ED8;
 }
 
-/* Responsive adjustments for mobile screens */
+
 @media (max-width: 768px) {
    .team-member {
-       width: calc(100% - 30px); /* Full width on smaller screens with margin adjustment */
-       margin-bottom :15px; /* Space below each member card on mobile */
+       width: calc(100% - 30px);
+       margin-bottom :15px;
    }
 
    .section-title {
-       font-size :24px; /* Smaller font size for section titles on mobile */
+       font-size :24px;
    }
 
    .team-header {
-       font-size :28px; /* Smaller font size for main heading on mobile */
+       font-size :28px;
    }
 }
