@@ -9,7 +9,7 @@ import JoinUs from './pages/JoinUs';
 import Events from './pages/Events';
 import Contact from './pages/Contact';
 import Submission from './pages/Submission';
-import Donate from './pages/Donate';
+import Research from './pages/Research';
 
 const pageVariants = {
     initial: {
@@ -48,7 +48,7 @@ const App = () => {
                         <Route path="/events" element={<Events />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/Submission" element={<Submission />} />
-                        <Route path="/donate" element={<Donate />} />
+                        <Route path="/Research" element={<Research />} />
                     </Routes>
                 </motion.div>
             </AnimatePresence>

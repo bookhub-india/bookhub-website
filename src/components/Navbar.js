@@ -30,7 +30,7 @@ const Navbar = () => {
                 <Link to='/events' className='button events'>EVENTS</Link>
                 <Link to='/contact' className='button contact'>CONTACT</Link>
                 <Link to='/submission' className='button projects'>SUBMISSION</Link>
-                <Link to='/donate' className='button donate'>DONATE</Link>
+                <Link to='/Research' className='button donate'>Research</Link>
             </div>
             <div className='hamburger' onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 {/* Hamburger icon */}
