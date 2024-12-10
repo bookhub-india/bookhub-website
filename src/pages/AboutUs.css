@@ -4,102 +4,101 @@ html, body {
 .about-us-container {
     display: flex;
     flex-direction: column; 
-    padding: 40px; /* General padding for desktop */
-    background-color: #FCF6E8; /* Light gray background for contrast */
-    border-radius: 8px; /* Rounded corners for the container */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-/* Increased font sizes for headers and buttons on homepage */
-.text-section {
-    flex: 0 0 auto; /* Allow text section to take full width */
-    padding-right: 0; /* Remove right padding */
-    margin-bottom: 20px; /* Add space below text section */
-    background-color: rgba(12, 12, 12, 0.295); /* Slightly white background for text section */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside the text section */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 40px; 
+    background-color: #FCF6E8; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
 }
 
-/* Header styles */
+.text-section {
+    flex: 0 0 auto; 
+    padding-right: 0;
+    margin-bottom: 20px;
+    background-color: rgba(12, 12, 12, 0.295);
+    border-radius: 8px; 
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 .main-header {
-    font-size: 48px; /* Normal header size for desktop */
+    font-size: 48px; 
     font-family: 'Times New Roman', Times, serif;
     color: #4A2E18;
-    margin-top: 20px; /* Add margin to move it down slightly */
+    margin-top: 20px; 
     
-    /* Text shadow for glowing effect */
+    
     text-shadow: 
         0 0 10px rgba(255, 255, 255, 0.8), 
         0 0 20px rgba(255, 255, 255, 0.6), 
         0 0 30px rgba(255, 255, 255, 0.4);
 }
 
-/* Background highlight behind the header */
+
 .text-section::before {
     content: '';
     position: absolute;
-    top: -10px; /* Adjust as needed */
-    left: -10px; /* Adjust as needed */
-    right: -10px; /* Adjust as needed */
-    bottom: -10px; /* Adjust as needed */
-    background-color: rgba(255, 255, 255, 0.2); /* Light background color with transparency */
-    border-radius: 8px; /* Optional rounded corners */
-    z-index: -1; /* Place behind the header text */
+    top: -10px; 
+    left: -10px; 
+    right: -10px; 
+    bottom: -10px; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 8px;
+    z-index: -1;
 }
 
 .sub-header {
-    font-size: 18px; /* Normal sub-header size for desktop */
+    font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
     color: #4A2E18; 
     line-height: 1.6; 
 }
 
-/* Slider section styles */
+
 .slider-section {
-    flex: 0 0 auto; /* Allow slider section to take full width */
+    flex: 0 0 auto; 
 }
 
-/* Slider image styles */
+
 .slider-image {
-    width: 100%; /* Make images responsive */
+    width: 100%;
     height: auto; 
 }
 
-/* Media Queries for Small Screens */
+
 @media (max-width: 768px) {
     .text-section {
-        text-align: center; /* Center align text on small screens */
+        text-align: center;
     }
 
     .main-header {
-        font-size: 28px; /* Adjust header size for small screens */
-        text-align: center; /* Center align text */
-        margin-bottom: 10px; /* Adjust margin for smaller screens */
-        box-shadow: none; /* Remove shadow on mobile if desired */
-        background-color: transparent; /* Remove background color on mobile if desired */
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 10px; 
+        box-shadow: none; 
+        background-color: transparent;
     }
 
     .sub-header {
-        font-size: 16px; /* Adjust sub-header size for small screens */
-        text-align: center; /* Center align text */
-        margin-top: 10px; /* Add margin for spacing */
+        font-size: 16px; 
+        text-align: center;
+        margin-top: 10px;
     }
 
     .slider-image {
-        width: 100%; /* Make images responsive */
+        width: 100%;
         height: auto; 
     }
 }
 
-/* Media Queries for Desktop Screens to Resize Slider Images */
+
 @media (min-width: 769px) {
     .slider-section {
-        width: 100%; /* Ensure slider section takes full width on desktop */
+        width: 100%; 
     }
 
     .slider-image {
-        max-width: calc(100% / 5); /* Resize images to one-fifth of their original size on desktop */
-        margin-left: auto; /* Center align images in slider section */
+        max-width: calc(100% / 5);
+        margin-left: auto; 
         margin-right: auto;
     }
 }
