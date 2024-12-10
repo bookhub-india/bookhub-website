@@ -6,8 +6,8 @@ body {
 }
 
 .navbar {
-  width: 100%; /* Full width */
-  max-width: 1280px; /* Max width for larger screens */
+  width: 100%;
+  max-width: 1280px; 
   height: 109px;
   background-color: #FCF6E8;
   display: flex;
@@ -22,18 +22,18 @@ body {
 }
 
 .logo-image {
-  width: 105px; /* Logo size */
-  height: auto; /* Maintain aspect ratio */
+  width: 105px;
+  height: auto; 
   transition: background-color 0.3s ease;
    box-shadow: 
        -2px -2px 5px rgba(255,255,255,0.8), 
        inset -2px -2px 5px rgba(255,255,255,0.4);
 }
 
-/* Button styles */
+
 .button {
-  height: 50px; /* Fixed height for all buttons */
-  min-width: 95px; /* Minimum width for buttons */
+  height: 50px;
+  min-width: 95px; 
   background-color: #4A2E18;
   font-size: 14px;
   text-transform: uppercase;
@@ -48,83 +48,83 @@ body {
      inset -2px -2px 5px rgba(255,255,255,0.4);
 }
 
-/* Flexbox container for nav links */
+
 .nav-links {
-    display: flex; /* Show links in desktop view */
-    margin-left: auto; /* Pushes links towards the left */
+    display: flex; 
+    margin-left: auto; 
     transition: background-color 0.3s ease;
    box-shadow: 
        -2px -2px 5px rgba(255,255,255,0.8), 
        inset -2px -2px 5px rgba(255,255,255,0.4);
 }
 
-/* Add margin for desktop buttons */
-@media (min-width: 769px) { /* Only apply this for larger screens */
+
+@media (min-width: 769px) { 
     .button {
-        margin-right: 15px; /* Adjust this value as needed for spacing */
+        margin-right: 15px;
     }
 
-    /* Remove margin from the last button to avoid extra space at the end */
+    
     .button:last-child {
         margin-right: 0;
     }
 }
 
-/* Media Queries */
+
 @media (max-width: 768px) {
  .navbar {
-      justify-content: space-between; /* Space between logo and hamburger */
-      height:auto ; /* Allow height to adjust based on content */ 
+      justify-content: space-between;
+      height:auto ; 
  }
 
  .nav-links {
-      display:none ; /* Hide links by default on mobile */ 
-      flex-direction : column ; /* Stack links vertically on mobile */ 
-      align-items : stretch ; /* Stretch items to full width */ 
-      position : absolute ; /* Position absolute for dropdown effect */ 
-      top: calc(109px); /* Position below navbar height */ 
+      display:none ; 
+      flex-direction : column ; 
+      align-items : stretch ; 
+      position : absolute ;  
+      top: calc(109px);  
       left : 0;
-      background-color : #FCF6E8; /* Background color for dropdown */ 
-      z-index : 1; /* Ensure dropdown is above other content */ 
-      width : 100%; /* Full width for nav links on mobile */ 
+      background-color : #FCF6E8;
+      z-index : 1;  
+      width : 100%; 
  }
 
  .nav-links.open {
-     display:flex ; /* Show links when menu is open */ 
+     display:flex ; 
  }
 
  .hamburger {
-     display:flex ; /* Show hamburger icon on mobile */ 
-     cursor: pointer; /* Change cursor to pointer */
+     display:flex ; 
+     cursor: pointer;
  }
 
  .button {
-     width : 100%; /* Make buttons full width on mobile */
-     margin-bottom : 10px ; /* Add space between buttons */
+     width : 100%; 
+     margin-bottom : 10px ; 
  }
 }
 
 @media (max-width: 480px) {
  .button {
-     font-size :12px ; /* Smaller font size for very small screens */ 
+     font-size :12px ; 
  }
 
  h1 {
-     font-size :20px ; /* Adjust heading size for smaller screens */ 
+     font-size :20px ; 
  }
 }
 
-/* Additional styles for hamburger icon */
+
 .hamburger {
-    display: none; /* Hide hamburger by default */
+    display: none; 
     flex-direction: column;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
     .hamburger {
-        display: flex; /* Show hamburger icon on mobile */
-        margin-left: auto; /* Align hamburger icon to the right */
+        display: flex; 
+        margin-left: auto;
     }
 }
 
@@ -132,5 +132,5 @@ body {
     height: 3px;
     width: 25px;
     background-color: #4A2E18;
-    margin: 3px 0; /* Space between bars */
+    margin: 3px 0;
 }
