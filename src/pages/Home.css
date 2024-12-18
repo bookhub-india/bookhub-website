@@ -1,53 +1,51 @@
 .home-container {
-    padding: 20px; /* General padding for home container */
-    position: relative; /* Position relative for absolute children */
-    overflow: hidden; /* Hide overflow */
-    height: 100vh; /* Full viewport height */
+    padding: 20px; 
+    position: relative; 
+    overflow: hidden;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
-    align-items: center; /* Center content horizontally */
-    color: white; /* Text color for better visibility against background */
-    text-align: center; /* Center align text */
-    background-size: cover; /* Cover the entire area */
-    background-position: center; /* Center the images */
+    justify-content: flex-start;
+    align-items: center; 
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center; 
 }
 
-/* Increased font sizes for headers and buttons on homepage */
 .main-header {
-    font-size: 48px; /* Increased header size */
+    font-size: 48px; 
     font-family: 'Times New Roman', Times, serif;
-    margin-top: 20px; /* Add margin to move it down slightly */
+    margin-top: 20px; 
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
                  0 0 20px rgba(255, 255, 255, 0.6), 
                  0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 .sub-header {
-    font-size: 24px; /* Increased sub-header size */
+    font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.6; 
-    margin-top: 10px; /* Add margin to move it down slightly */
+    margin-top: 10px; 
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 
                  0 0 10px rgba(255, 255, 255, 0.6);
 }
 
-/* Specific styles for homepage buttons only */
+
 .home-button {
     display: flex;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     justify-content: center;
-    background-color: rgba(74, 46, 24, 0.8); /* Semi-transparent background for buttons */
+    background-color: rgba(74, 46, 24, 0.8); 
     color: white;
     text-transform: uppercase;
-    font-size: 18px; /* Increased button font size for homepage buttons */
+    font-size: 18px;
     text-decoration: none;
     border-radius: 12px;
-    padding: 15px 30px; /* Added padding for larger button area */
-    
-   /* Adjusted margin to create space between buttons */
-   margin-bottom: 10px; /* Space below each button */
+    padding: 15px 30px;
+   
+   margin-bottom: 10px; 
 
    transition: background-color 0.3s ease;
    box-shadow: 
@@ -56,22 +54,22 @@
 }
 
 .home-button:hover {
-   background-color: rgba(74,46,24,1); /* Darken button on hover for feedback */
+   background-color: rgba(74,46,24,1); 
 }
 
 .button-container {
     display: flex;
-    flex-direction: column; /* Stack buttons vertically for consistent spacing */
-    align-items: center; /* Center buttons horizontally in container */
+    flex-direction: column;
+    align-items: center;
 }
 
 .button-container .home-button:not(:last-child) {
-   margin-bottom: 10px; /* Space between buttons (only apply to non-last button) */
+   margin-bottom: 10px;
 }
 
-/* Navbar button styles (ensure these are defined separately) */
+
 .navbar .button {
-   font-size: 14px; /* Normal size for navbar buttons */
+   font-size: 14px;
 }
 .social-icons {
     display: flex;
