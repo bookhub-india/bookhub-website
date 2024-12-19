@@ -1,13 +1,30 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import image1 from '../assets/BOOKHUB-LOGO.png';
 import image2 from '../assets/BOOKHUB-LOGO-2.png'; 
 import image3 from '../assets/BOOKHUB-LOGO-3.png'; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import './AboutUs.css'; // Ensure you import the CSS file
+import './AboutUs.css';
 
 const AboutUs = () => {
+    const subHeaders = [
+        "At BookHub, we’re passionate about empowering aspiring writers to find their voice, share their stories, and shine in the literary world. Founded as a student-led initiative, we’re here to support new authors with resources, guidance, and a platform to showcase their talent.",
+        "From editing assistance and writing reviews to workshops and expert insights, our mission is to create a thriving community for writers. Whether you’re a budding novelist, a poet with a vision, or someone simply seeking to improve your craft, BookHub is your space to learn, grow, and connect with like-minded individuals.",
+        "If you'd like to submit your work for editing, head over to the Submission page and share your piece with us. For queries, feedback, or reviews, visit the Contact Us page and let us know how we can help."
+    ];
+
+    const [currentSubHeaderIndex, setCurrentSubHeaderIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSubHeaderIndex((prevIndex) => (prevIndex + 1) % subHeaders.length);
+        }, 9000); // Change sub-header every 3 seconds
+
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, []);
+
     const settings = {
         dots: true,
         infinite: true,
@@ -23,10 +40,13 @@ const AboutUs = () => {
             <div className="text-section">
                 <h1 className="main-header">About Us</h1>
                 <p className="sub-header">
-                    At BookHub, we are passionate about nurturing young writers. Join our supportive community where you can refine your skills, gain valuable feedback, and find your unique voice. Whether it’s through editing tips or workshops with established authors, we provide all the resources you need to thrive. Ready to turn your passion into purpose? Connect with us today!
+                    {subHeaders[currentSubHeaderIndex]}
                 </p>
+                <div className="button-container">
+                    <Link to="/Submission" className="home-button about-us">Submission</Link>
+                    <Link to="/contact" className="home-button contact-us">CONTACT</Link>
+                </div>
             </div>
-            {/* Moved slider section below text section */}
             <div className="slider-section">
                 <Slider {...settings}>
                     <div>
