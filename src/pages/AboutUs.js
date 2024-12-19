@@ -20,9 +20,9 @@ const AboutUs = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSubHeaderIndex((prevIndex) => (prevIndex + 1) % subHeaders.length);
-        }, 9000); // Change sub-header every 3 seconds
+        }, 9000);
 
-        return () => clearInterval(interval); // Cleanup on unmount
+        return () => clearInterval(interval); 
     }, []);
 
     const settings = {
