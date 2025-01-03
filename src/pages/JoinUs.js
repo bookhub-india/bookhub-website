@@ -60,7 +60,7 @@ const JoinUs = () => {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            access_key: '1e1f9e92-22a5-414e-895d-21e74fdf21a6', 
+            access_key: '77abcb6f-9ad7-4aae-989a-b36d1c217a17', 
             fullName: formData.fullName,
             email: formData.email,
             phone: `${formData.countryCode} ${formData.phone}`,
