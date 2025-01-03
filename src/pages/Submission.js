@@ -10,7 +10,7 @@ const ArticleSubmission = () => {
                 title="Form"
                 allowTransparency="true"
                 allow="geolocation; microphone; camera; fullscreen"
-                src="https://form.jotform.com/243393455323053"
+                src="https://form.jotform.com/250022808805047"
                 frameBorder="0"
                 style={{
                     width: '100%',
@@ -22,7 +22,7 @@ const ArticleSubmission = () => {
             </iframe>
             <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
             <script>
-                {`window.jotformEmbedHandler("iframe[id='JotFormIFrame-243393455323053']", "https://form.jotform.com/")`}
+            {`window.jotformEmbedHandler("iframe[id='JotFormIFrame-250022808805047']", "https://form.jotform.com/")`} 
             </script>
         </div>
     );
