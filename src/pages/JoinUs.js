@@ -146,6 +146,15 @@ const JoinUs = () => {
                 <option value="+1">USA (+1)</option>
                 <option value="+44">UK (+44)</option>
                 <option value="+91">India (+91)</option>
+                <option value="+971">UAE (+971)</optio>
+                <option value="+61">Australia (+61)</option>
+                <option value="+81">Japan (+81)</option>
+                <option value="+49">Germany (+49)</option>
+                <option value="+33">France (+33)</option>
+                <option value="+39">Italy (+39)</option>
+                <option value="+34">Spain (+34)</option>
+                <option value="+55">Brazil (+55)</option>
+                <option value="+7">Russia (+7)</option>
                 
               </select>
               <input
