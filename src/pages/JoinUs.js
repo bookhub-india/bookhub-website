@@ -180,9 +180,10 @@ const JoinUs = () => {
             <select id="position" name="position" value={formData.position} onChange={handleChange} required style={{ width: '100%' }}>
               
               <option value="">Select a position</option>
-              <option value="A">Position A</option>
-              <option value="B">Position B</option>
-              <option value="C">Position C</option>
+              <option value="A">Content Designer Intern</option>
+              <option value="B">Content Editor Intern</option>
+              <option value="C">Web Developer</option>
+              <option value="D">Other</option>
               
             </select>
             {formErrors.position && <p className="error">{formErrors.position}</p>}
@@ -218,9 +219,9 @@ const JoinUs = () => {
              >
                
                <option value="">Select your education level</option>
-               <option value='A'>Education Level A</option>
-               <option value='B'>Education Level B</option>
-               <option value='C'>Education Level C</option>
+               <option value='A'>Highschool</option>
+               <option value='B'>Undergraduate</option>
+               <option value='C'>Graduate</option>
                
                <option value='Other'>Other</option>              
              </select>
