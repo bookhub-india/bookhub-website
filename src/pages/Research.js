@@ -7,13 +7,13 @@ import Event20 from '../assets/Bookhub-21.jpeg';
 const eventsData = [
     {
         title: 'Publication Houses',
-        description: '',
+        description: 'A curated Google Drive folder featuring a comprehensive list of publication houses to assist writers in finding the right platform for their work.',
         images: [Event1, Event1], // Ensure this image is only included once
         link: 'https://drive.google.com/drive/folders/1v2Jv5elf8Rh_B_qg9xZH1ZGY8m9RJEnP'
     },
     {
         title: 'Websites',
-        description: '',
+        description: 'Access a valuable Google Drive folder filled with resources designed to enhance writing skills and provide essential content guidance for aspiring writers.',
         images: [Event20, Event20],
         link: 'https://drive.google.com/drive/folders/1vJVC7wyV0_5-tnsG_lKweIRO98ckzow2' // Replace with actual LinkedIn post link
     },
