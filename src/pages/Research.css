@@ -1,66 +1,88 @@
-.team-container {
-    padding: 20px;
+body {
+    margin: 0; 
+    padding: 0;
+    background-color: #0E4DA2;  
 }
 
-.team-header {
+.events-container {
+    padding: 40px;
+}
+
+.main-heading {
+    font-size: 48px; 
+    color: #4A2E18;
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 30px;
+    margin-bottom: 40px; 
 }
 
-.section-title {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px; 
+.event-card {
+   background-color: rgba(255, 255, 255, 0.9);
+   border-radius: 8px;
+   padding: 15px;
+   margin-bottom: 15px; 
+   width: calc(50% - 10px); 
+   margin-left:auto; 
+   margin-right:auto; 
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.team-members {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.event-card-title {
+    font-size: 22px; 
 }
 
-.team-member {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1); 
-    margin: 15px;
-    padding: 15px;
-    text-align: center;
-    
-   
-   width: calc(30% - 30px); 
-   transition: transform 0.3s, box-shadow 0.3s; 
+.event-card-description {
+    font-size: 16px; 
 }
 
-.team-member:hover {
-   transform: translateY(-5px);
-   box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+.more-info-button {
+   display:inline-block;
+   margin-top:10px;
+   padding:10px 15px;
+   background-color:#B48ED8;
+   color:white;
+   text-decoration:none;
+   border-radius:5px;
+   transition:.3s ease;
 }
 
-.member-image {
-   width: 100%; 
-   height:auto; 
-   border-radius: 10px;
+.more-info-button:hover {
+   background-color:#6F4E37;
 }
 
-.member-role {
-   font-weight:bold; 
-   color:#B48ED8;
+/* Image Styling */
+.slider-image {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Set a max height for uniformity */
+    object-fit: cover; /* Cover the area without distortion */
 }
 
-
+/* Media Queries for Mobile Optimization */
 @media (max-width: 768px) {
-   .team-member {
-       width: calc(100% - 30px);
-       margin-bottom :15px;
+   .events-container {
+       padding: 20px; /* Reduced padding for mobile */
    }
 
-   .section-title {
-       font-size :24px;
+   .main-heading {
+       font-size: 32px; /* Smaller heading size */
+       margin-bottom: 20px; /* Adjusted margin */
    }
 
-   .team-header {
-       font-size :28px;
+   .event-card {
+       width: calc(100% - 20px); /* Full width on mobile */
+       padding: 10px; /* Reduced padding */
+   }
+
+   .event-card-title {
+       font-size: 18px; /* Smaller title size */
+   }
+
+   .event-card-description {
+       font-size: 14px; /* Smaller description size */
+   }
+
+   .more-info-button {
+       padding: 8px 12px; /* Smaller button size */
+       font-size: 14px; /* Adjusted font size */
    }
 }

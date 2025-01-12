@@ -1,139 +1,60 @@
 import React from 'react';
-import './Research.css';
-import image1 from '../assets/BOOKHUB-LOGO.png';
-import image2 from '../assets/BOOKHUB-LOGO-2.png';
-import image3 from '../assets/BOOKHUB-LOGO-3.png';
+import Slider from 'react-slick';
+import './Events.css';
+import Event1 from '../assets/Bookhub-11.jpeg';
+import Event20 from '../assets/Bookhub-21.jpeg';
 
-const teamMembers = [
+const eventsData = [
     {
-        name: 'Author 1',
-        role: 'Project 1',
-        description: 'Sample Description',
-        image: image1,
+        title: 'Publication Houses',
+        description: '',
+        images: [Event1, Event1], // Ensure this image is only included once
+        link: 'https://drive.google.com/drive/folders/1v2Jv5elf8Rh_B_qg9xZH1ZGY8m9RJEnP'
     },
     {
-        name: 'Author 2',
-        role: 'Project 2',
-        description: 'Sample Description',
-        image: image1,
+        title: 'Websites',
+        description: '',
+        images: [Event20, Event20],
+        link: 'https://drive.google.com/drive/folders/1vJVC7wyV0_5-tnsG_lKweIRO98ckzow2' // Replace with actual LinkedIn post link
     },
-    {
-        name: 'Author 3',
-        role: 'Project 3',
-        description: 'Sample Description',
-        image: image1, 
-    },
-    {
-        name: 'Article 1',
-        role: 'Publication Date',
-        description: 'Sample Description',
-        image: image2,
-    },
-    {
-        name: 'Article 2',
-        role: 'Publication Date',
-        description: 'Sample Description',
-        image: image2,
-    },
-    {
-        name: 'Article 3',
-        role: 'Publication Date',
-        description: 'Sample Description',
-        image: image2,
-    },
-    {
-        name: 'Article 4',
-        role: 'Publication Date',
-        description: 'Sample Description',
-        image: image2,
-    },
-    {
-        name: 'Article 5',
-        role: 'Publication Date',
-        description: 'Sample Description',
-        image: image2,
-    },
-    {
-        name: 'Article 6',
-        role: 'Publication Date',
-        description: 'Sample Description',
-        image: image2,
-    },
-    
-    {
-        name: 'Extras 1',
-        role: 'NA',
-        description: 'Sample Description',
-        image: image3,
-    },
-    {
-        name: 'Extras 2',
-        role: 'NA',
-        description: 'Sample Description',
-        image: image3,
-    },
-    {
-        name: 'Extras 3',
-        role: 'NA',
-        description: 'Sample Description',
-        image: image3,
-    },
-    {
-        name: 'Extras 4',
-        role: 'NA',
-        description: 'Sample Description',
-        image: image3, 
-    }
 ];
 
-const Research = () => {
+const Events = () => {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    };
+
     return (
-        <div className="team-container">
-            <h1 className="team-header">Resources</h1>
+        <div className="events-container">
+            <h1 className="main-heading">EVENTS</h1>
             
-            <section className="founders-section">
-                <h2 className="section-title">Authors</h2>
-                <div className="team-members">
-                    {teamMembers.slice(0, 3).map(member => (
-                        <div className="team-member" key={member.name}>
-                            <img src={member.image} alt={member.name} className="member-image" />
-                            <h3>{member.name}</h3>
-                            <p className="member-role">{member.role}</p>
-                            <p>{member.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            <section className="media-team-section">
-                <h2 className="section-title">Articles</h2>
-                <div className="team-members">
-                    {teamMembers.slice(3, 9).map(member => (
-                        <div className="team-member" key={member.name}>
-                            <img src={member.image} alt={member.name} className="member-image" />
-                            <h3>{member.name}</h3>
-                            <p className="member-role">{member.role}</p>
-                            <p>{member.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            <section className="events-team-section">
-                <h2 className="section-title">Extras</h2>
-                <div className="team-members">
-                    {teamMembers.slice(9).map(member => (
-                        <div className="team-member" key={member.name}>
-                            <img src={member.image} alt={member.name} className="member-image" />
-                            <h3>{member.name}</h3>
-                            <p className="member-role">{member.role}</p>
-                            <p>{member.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>           
+            {/* Events Section */}
+            <div className="events-section">
+                {eventsData.map((event, index) => (
+                    <div key={index} className="event-card">
+                        <h3 className="event-card-title">{event.title}</h3>
+                        {event.images.length > 0 && ( // Check if there are images
+                            <Slider {...settings} className="event-slider">
+                                {event.images.map((image, imgIndex) => (
+                                    <div key={imgIndex}>
+                                        <img src={image} alt={`Event ${index + 1} Image ${imgIndex + 1}`} className="slider-image" />
+                                    </div>
+                                ))}
+                            </Slider>
+                        )}
+                        <p className="event-card-description">{event.description}</p>
+                        <a href={event.link} target="_blank" rel="noopener noreferrer" className="more-info-button">More Info</a>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
 
-export default Research;
+export default Events;
