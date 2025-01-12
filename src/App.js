@@ -10,7 +10,7 @@ import Events from './pages/Events';
 import Contact from './pages/Contact';
 import Submission from './pages/Submission';
 import Research from './pages/Research';
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 const pageVariants = {
     initial: {
         opacity: 0,
