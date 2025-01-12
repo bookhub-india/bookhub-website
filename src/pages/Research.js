@@ -49,7 +49,7 @@ const Events = () => {
                             </Slider>
                         )}
                         <p className="event-card-description">{event.description}</p>
-                        <a href={event.link} target="_blank" rel="noopener noreferrer" className="more-info-button">More Info</a>
+                        <a href={event.link} target="_blank" rel="noopener noreferrer" className="more-info-button">Link</a>
                     </div>
                 ))}
             </div>
