@@ -32,7 +32,7 @@ const Events = () => {
 
     return (
         <div className="events-container">
-            <h1 className="main-heading">EVENTS</h1>
+            <h1 className="main-heading">Resources</h1>
             
             {/* Events Section */}
             <div className="events-section">
