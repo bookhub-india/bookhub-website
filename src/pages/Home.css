@@ -1,7 +1,6 @@
 .home-container {
     padding: 20px; 
     position: relative; 
-    overflow: hidden;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -9,8 +8,8 @@
     align-items: center; 
     color: white;
     text-align: center;
-    background-size: cover;
-    background-position: center; 
+    background-size: cover; /* Ensure background covers the container */
+    background-position: center; /* Center the background image */
 }
 
 .main-header {
@@ -31,22 +30,25 @@
                  0 0 10px rgba(255, 255, 255, 0.6);
 }
 
+.button-container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
 
 .home-button {
     display: flex;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     justify-content: center;
-    background-color: rgba(74, 46, 24, 0.8); 
+    background-color: rgba(74,46,24,0.8); 
     color: white;
     text-transform: uppercase;
     font-size: 18px;
     text-decoration: none;
     border-radius: 12px;
-    padding: 15px 30px;
-   
+    padding: 15px 30px;   
    margin-bottom: 10px; 
-
    transition: background-color 0.3s ease;
    box-shadow: 
        -2px -2px 5px rgba(255,255,255,0.8), 
@@ -57,35 +59,76 @@
    background-color: rgba(74,46,24,1); 
 }
 
-.button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.button-container .home-button:not(:last-child) {
-   margin-bottom: 10px;
-}
-
-
-.navbar .button {
-   font-size: 14px;
-}
 .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    box-shadow: 
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   margin-bottom: 20px;
+   box-shadow: 
        -2px -2px 5px rgba(255,255,255,0.8), 
        inset -2px -2px 5px rgba(255,255,255,0.4);
 }
-.social-icons a {
-    color: #4A2E18;
-    font-size: 24px;
-    transition: transform 0.3s ease, color 0.3s ease;
+
+/* Modal Styles */
+.modal-overlay {
+   position :fixed;  
+   top :0;  
+   left :0;  
+   right :0;  
+   bottom :0;  
+   background-color :rgba(0 ,0 ,0 ,0.7); /* Semi-transparent background */
+   display :flex;  
+   justify-content :center;  
+   align-items :center;  
+   z-index :1000; /* Make sure it appears above other content */
 }
-.social-icons a:hover {
-    color: #3B2412;
-    transform: scale(1.2); 
+
+.modal-content {
+   background-color :white;  
+   padding :20px;  
+   border-radius :10px;  
+   text-align :center;  
+   max-width :350px; /* Set a smaller max width */
+   width :80%; /* Responsive width */
+   position: relative; /* Allow absolute positioning of close button */
+}
+
+.close-button {
+   background:none;  
+   border:none;  
+   font-size :24px;  
+   cursor:pointer;  
+   position:absolute;  
+   top :10px;  
+   right :10px; /* Adjusted to fit inside modal */
+   box-shadow: 
+       -2px -2px 5px rgba(255,255,255,0.8), 
+       inset -2px -2px 5px rgba(255,255,255,0.4);
+}
+
+.event-image {
+   width :100%;  
+   height:auto;  
+   border-radius :10px;  
+}
+
+.view-more-button {
+   display:inline-block;  
+   margin-top :15px;  
+   padding :10px 20px;  
+   background-color :#4A2E18; /* Button color */
+   color:white;   
+   text-decoration:none;   
+   border-radius :5px;   
+}
+
+.view-more-button:hover {
+   background-color :#6F4E37; /* Hover effect */
+}
+
+/* Add styles for modal heading to match main header */
+.modal-content h2 {
+    font-size: 29.5px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #4A2E18; /* Set to match your desired color */
 }

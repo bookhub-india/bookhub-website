@@ -4,12 +4,19 @@ import './Events.css';
 import Event1 from '../assets/Event-1.png';
 import Event2 from '../assets/Event-2.png';
 import Event3 from '../assets/Event-3.png';
+import Event4 from '../assets/Bookhub-31.jpeg'
 import Workshop101 from '../assets/Workshop-101.png';
 import Workshop102 from '../assets/Workshop-102.png';
 import Workshop201 from '../assets/Workshop-201.png';
 import Workshop202 from '../assets/Workshop-202.png';
 
 const eventsData = [
+    {
+        title: '25 Books in 2025',
+        description: '25 authors in 2025 is a year long programme by BookHub, where we will help 25 young authors make their dream of publishing a Book alive.',
+        images: [Event4, Event4, Event4],
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLSd1vPe9be_YYepjY-1OXS_Xy7khxvB3VynCT9Dy6iIcpWTn5w/viewform?usp=dialog' // Replace with actual LinkedIn post link
+    },
     {
         title: 'Inks and Aspirations',
         description: 'On November 24, 2024 at 6 PM IST, BookHub and YouthSphere collaborated to host Inks and Aspirations, a workshop dedicated to guiding young writers. This insightful event featured expert speakers who provided valuable insights into the world of writing and its career possibilities.',

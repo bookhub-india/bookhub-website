@@ -7,7 +7,7 @@ import Event20 from '../assets/Bookhub-21.jpeg';
 const eventsData = [
     {
         title: 'Publication Houses',
-        description: 'A curated Google Drive folder featuring a comprehensive list of publication houses to assist writers in finding the right platform for their work.',
+        description: 'A curated Google Drive folder featuring a comprehensive list of publication houses all over India and UAE that prove to be well reputed and new authors friendly.',
         images: [Event1, Event1], // Ensure this image is only included once
         link: 'https://drive.google.com/drive/folders/1v2Jv5elf8Rh_B_qg9xZH1ZGY8m9RJEnP'
     },
