@@ -4,7 +4,7 @@ import './Events.css';
 import Event1 from '../assets/Event-1.png';
 import Event2 from '../assets/Event-2.png';
 import Event3 from '../assets/Event-3.png';
-import Event4 from '../assets/Bookhub-31.jpeg'
+import Event4 from '../assets/Bookhub-31.jpeg'; // Ongoing event image
 import Workshop101 from '../assets/Workshop-101.png';
 import Workshop102 from '../assets/Workshop-102.png';
 import Workshop201 from '../assets/Workshop-201.png';
@@ -13,15 +13,15 @@ import Workshop202 from '../assets/Workshop-202.png';
 const eventsData = [
     {
         title: '25 Books in 2025',
-        description: '25 authors in 2025 is a year long programme by BookHub, where we will help 25 young authors make their dream of publishing a Book alive.',
+        description: '25 authors in 2025 is a year-long programme by BookHub, where we will help 25 young authors make their dream of publishing a Book alive.',
         images: [Event4, Event4, Event4],
-        link: 'https://docs.google.com/forms/d/e/1FAIpQLSd1vPe9be_YYepjY-1OXS_Xy7khxvB3VynCT9Dy6iIcpWTn5w/viewform?usp=dialog' // Replace with actual LinkedIn post link
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLSd1vPe9be_YYepjY-1OXS_Xy7khxvB3VynCT9Dy6iIcpWTn5w/viewform?usp=dialog'
     },
     {
         title: 'Inks and Aspirations',
-        description: 'On November 24, 2024 at 6 PM IST, BookHub and YouthSphere collaborated to host Inks and Aspirations, a workshop dedicated to guiding young writers. This insightful event featured expert speakers who provided valuable insights into the world of writing and its career possibilities.',
+        description: 'On November 24, 2024 at 6 PM IST, BookHub and YouthSphere collaborated to host Inks and Aspirations, a workshop dedicated to guiding young writers.',
         images: [Event1, Event2, Event3],
-        link: 'https://www.linkedin.com/posts/bookhubt_workshop-careers-writers-activity-7266753327521042432-y0HG?utm_source=share&utm_medium=member_desktop' // Replace with actual LinkedIn post link
+        link: 'https://www.linkedin.com/posts/bookhubt_workshop-careers-writers-activity-7266753327521042432-y0HG?utm_source=share&utm_medium=member_desktop'
     },
     {
         title: 'Acing the interviews: #Workshop-2',
@@ -33,27 +33,7 @@ const eventsData = [
         title: 'Resume building: #Workshop-1',
         description: 'On September 1, 2024, at 8:00 PM IST, we hosted our first ever internship exclusive skill building workshop, dedicated to helping our interns to hold their resumes.',
         images: [Workshop101, Workshop102],
-        link: 'https://www.linkedin.com/posts/bookhubt_workshop-community-writing-activity-7236050893056479233-511X?utm_source=share&utm_medium=member_desktop' // Replace with actual LinkedIn post link
-    },
-    {
-        title: 'Workshop 3',
-        description: 'Explore the fundamentals of scriptwriting in this engaging workshop.',
-        link: 'https://www.linkedin.com/in/your-post-link' // Replace with actual LinkedIn post link
-    },
-    {
-        title: 'Other Event 1',
-        description: 'An open mic night for aspiring writers to showcase their work.',
-        link: 'https://www.linkedin.com/in/your-post-link' // Replace with actual LinkedIn post link
-    },
-    {
-        title: 'Other Event 2',
-        description: 'A panel discussion featuring published authors sharing their journeys.',
-        link: 'https://www.linkedin.com/in/your-post-link' // Replace with actual LinkedIn post link
-    },
-    {
-        title: 'Other Event 3',
-        description: 'Networking event for writers to connect and collaborate on projects.',
-        link: 'https://www.linkedin.com/in/your-post-link' // Replace with actual LinkedIn post link
+        link: 'https://www.linkedin.com/posts/bookhubt_workshop-community-writing-activity-7236050893056479233-511X?utm_source=share&utm_medium=member_desktop'
     },
 ];
 
@@ -70,10 +50,11 @@ const Events = () => {
 
     return (
         <div className="events-container">
-            <h1 className="main-heading">EVENTS</h1> {/* Main heading for the page */}
-            
-            {/* Special Section for Inks and Aspirations */}
+            <h1 className="main-heading">EVENTS</h1>
+
+            {/* Special Section for Ongoing Event */}
             <div className="special-event">
+                <span className="ongoing-tag">Ongoing Event</span>
                 <h2 className="event-title">{eventsData[0].title}</h2>
                 <Slider {...settings} className="event-slider">
                     {eventsData[0].images.map((image, index) => (
@@ -89,8 +70,8 @@ const Events = () => {
             {/* Workshops Section */}
             <div className="events-section">
                 <h2 className="section-title">Workshops</h2>
-                {eventsData.slice(1, 4).map((event, index) => (
-                    <div key={index} className="special-event"> {/* Change to special-event class */}
+                {eventsData.slice(1).map((event, index) => (
+                    <div key={index} className="special-event">
                         <h3 className="event-card-title">{event.title}</h3>
                         <Slider {...settings} className="event-slider">
                             {event.images && event.images.map((image, imgIndex) => (
@@ -106,16 +87,7 @@ const Events = () => {
             </div>
 
             {/* Other Events Section */}
-            <div className="events-section">
-                <h2 className="section-title">Other Events</h2>
-                {eventsData.slice(4).map((event, index) => (
-                    <div key={index} className="event-card">
-                        <h3 className="event-card-title">{event.title}</h3>
-                        <p className="event-card-description">{event.description}</p>
-                        <a href={event.link} target="_blank" rel="noopener noreferrer" className="more-info-button">More Info</a>
-                    </div>
-                ))}
-            </div>
+            {/* Additional code for other events can go here */}
         </div>
     );
 };
