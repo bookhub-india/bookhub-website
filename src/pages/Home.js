@@ -51,7 +51,7 @@ const Home = () => {
           <a href="mailto:bookhubtindia@gmail.com" target="_blank" rel="noopener noreferrer">
             <FaEnvelope />
           </a>
-          <a href="https://instagram.com/bookk_hubbb" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/bookkhub" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>
           <a href="https://www.linkedin.com/company/bookhubt/mycompany/" target="_blank" rel="noopener noreferrer">
