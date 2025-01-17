@@ -36,14 +36,13 @@ const JoinUs = () => {
     if (!/\S+@\S+\.\S+/.test(formData.email)) errors.email = 'Email is invalid';
     if (!formData.phone) errors.phone = 'Phone Number is required';
     if (!formData.position) errors.position = 'Position is required';
-    if (!formData.interestReason || formData.interestReason.split(' ').length > 120) {
-      errors.interestReason = 'Please provide a valid reason (max 120 words)';
+    if (!formData.interestReason || formData.interestReason.split(' ').length > 1200) {
+      errors.interestReason = 'Please provide a valid reason (max 200 words)';
     }
     if (!formData.educationLevel) errors.educationLevel = 'Education Level is required';
     if (!formData.remoteExperience) errors.remoteExperience = 'Remote Experience is required';
-    if (!formData.workAtBookHubReason || formData.workAtBookHubReason.split(' ').length > 120) {
-      errors.workAtBookHubReason = 'Please provide a valid reason (max 120 words)';
-    }
+    if (!formData.workAtBookHubReason) errors.workAtBookHubReason = 'Please provide a valid reason (max 200 words)';
+    
     
     return errors;
   };
@@ -200,17 +199,17 @@ const JoinUs = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="interestReason">Why are you interested in this position? (100-120 words)</label>
+            <label htmlFor="interestReason">Why are you interested in this position? (150-200 words)</label>
             <textarea
               id="interestReason"
               name="interestReason"
               value={formData.interestReason}
               onChange={handleChange}
-              maxLength={300} 
+              maxLength={1416} 
               required
               style={{ width: '100%', height:'80px' }} 
             />
-             {<p>{`${(formData.interestReason.match(/\S+/g) || []).length} / 120 words`}</p>}
+             {<p>{`${(formData.interestReason.match(/\S+/g) || []).length} / 200 words`}</p>}
              {formErrors.interestReason && (
                <p className="error">{formErrors.interestReason}</p>
              )}
@@ -301,13 +300,13 @@ const JoinUs = () => {
 
            
            <div className='form-group'>
-             <label htmlFor='workAtBookHubReason'>Why do you want to work at BookHub? (100-120 words)</label>
+             <label htmlFor='workAtBookHubReason'>Why do you want to work at BookHub? (150-200 words)</label>
              <textarea 
                id='workAtBookHubReason' 
                name='workAtBookHubReason' 
                value={formData.workAtBookHubReason} 
                onChange={handleChange} 
-               maxLength={300} 
+               maxLength={1416} 
                required 
                style={{ width:'100%', height:'80px' }}
              />
