@@ -18,19 +18,21 @@ const Navbar = () => {
 
         return () => clearInterval(interval); 
     }, []);
-
+    const handleLinkClick = () => {
+        setIsMenuOpen(false);
+    };
     return (
         <div className='navbar'>
             <Link to='/' className='logo'>
                 <img src={logos[currentLogoIndex]} alt="Home" className="logo-image" />
             </Link>
             <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-                <Link to='/about-us' className='button about_us'>ABOUT US</Link>
-                <Link to='/join-us' className='button join_us'>JOIN US</Link>
-                <Link to='/events' className='button events'>EVENTS</Link>
-                <Link to='/contact' className='button contact'>CONTACT</Link>
-                <Link to='/submission' className='button projects'>SUBMISSION</Link>
-                <Link to='/Research' className='button donate'>Research</Link>
+                <Link to='/about-us' className='button about_us' onClick={handleLinkClick}>ABOUT US </Link>
+                <Link to='/join-us' className='button join_us' onClick={handleLinkClick}>JOIN US</Link>
+                <Link to='/events' className='button events' onClick={handleLinkClick}>EVENTS</Link>
+                <Link to='/contact' className='button contact' onClick={handleLinkClick}>CONTACT</Link>
+                <Link to='/submission' className='button projects' onClick={handleLinkClick}>SUBMISSION</Link>
+                <Link to='/Research' className='button donate' onClick={handleLinkClick}>Research</Link>
             </div>
             <div className='hamburger' onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 {/* Hamburger icon */}
