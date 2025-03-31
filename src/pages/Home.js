@@ -50,18 +50,6 @@ const Home = () => {
                     <FaLinkedin />
                 </a>
             </div>
-
-            {/* Modal for Ongoing Event */}
-            {isModalOpen && (
-                <div className="modal-overlay" onClick={handleCloseModal}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <button className="close-button" onClick={handleCloseModal}>✖</button>
-                        <h2>Ongoing Event</h2>
-                        <img src={eventImage} alt="Ongoing Event" className="event-image" />
-                        <Link to="/events" className="view-more-button">View More</Link>
-                    </div>
-                </div>
-            )}
         </div>
     );
 };
