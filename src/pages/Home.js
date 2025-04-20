@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import eventImage from '../assets/Bookhub-31.jpeg'; // Your event image
+import eventImage from '../assets/Event5.jpg'; //event image
 import logo1 from '../assets/image1.jpg'; // First background image
 import logo2 from '../assets/image2.jpg'; // Second background image
 import logo3 from '../assets/image3.jpg'; // Third background image
-import './Home.css'; // Ensure you import the CSS file
+import './Home.css';
 import { FaInstagram, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 
 const backgrounds = [logo1, logo2, logo3]; // Array of background images
 
 const Home = () => {
     const [currentBackgroundIndex, setCurrentBackgroundIndex] = useState(0);
-    const [isModalOpen, setIsModalOpen] = useState(true); // State to manage modal visibility
+    const [isModalOpen, setIsModalOpen] = useState(true); //manage modal visibility
 
     useEffect(() => {
         const bgInterval = setInterval(() => {
             setCurrentBackgroundIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
-        }, 9000); // Change background every 9 seconds
+        }, 9000); // Change background image
 
         return () => {
             clearInterval(bgInterval);
@@ -50,6 +50,18 @@ const Home = () => {
                     <FaLinkedin />
                 </a>
             </div>
+            
+            {/* Modal for Ongoing Event */}
+            {isModalOpen && (
+                <div className="modal-overlay" onClick={handleCloseModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <button className="close-button" onClick={handleCloseModal}>✖</button>
+                        <h2>Ongoing Event</h2>
+                        <img src={eventImage} alt="Ongoing Event" className="event-image" />
+                        <Link to="/events" className="view-more-button">View More</Link>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

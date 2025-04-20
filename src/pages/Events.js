@@ -5,12 +5,18 @@ import Event1 from '../assets/Event-1.png';
 import Event2 from '../assets/Event-2.png';
 import Event3 from '../assets/Event-3.png';
 import Event4 from '../assets/Bookhub-31.jpeg'; // Ongoing event image
+import Event5 from '../assets/Event5.jpg';
 import Workshop101 from '../assets/Workshop-101.png';
 import Workshop102 from '../assets/Workshop-102.png';
 import Workshop201 from '../assets/Workshop-201.png';
 import Workshop202 from '../assets/Workshop-202.png';
 
 const eventsData = [
+    {
+        title: 'The Publishing Playbook',
+        description: 'This webinar is a step-by-step guide to the entire publishing process, perfect for aspiring authors and curious minds alike. Led by an experienced author who has successfully published his own books.',
+        images: [Event5, Event5, Event5],
+    },
     {
         title: '25 Books in 2025',
         description: '25 authors in 2025 is a year-long programme by BookHub, where we will help 25 young authors make their dream of publishing a Book alive.',
@@ -85,9 +91,6 @@ const Events = () => {
                     </div>
                 ))}
             </div>
-
-            {/* Other Events Section */}
-            {/* Additional code for other events can go here */}
         </div>
     );
 };
